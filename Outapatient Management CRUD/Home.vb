@@ -6,4 +6,12 @@
         Me.PanelContainer.Controls.Add(Patients)
         Patients.Show()
     End Sub
+
+    Private Sub ExitBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitBtn.Click
+        Application.Exit()
+    End Sub
+
+    Private Sub MinimizeBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeBtn.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
 End Class
