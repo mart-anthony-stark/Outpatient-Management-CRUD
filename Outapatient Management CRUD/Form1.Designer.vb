@@ -35,7 +35,7 @@ Partial Class Form1
         Me.Label3 = New System.Windows.Forms.Label()
         Me.FirstnameBox = New System.Windows.Forms.TextBox()
         Me.LastnameBox = New System.Windows.Forms.TextBox()
-        Me.DOB = New System.Windows.Forms.DateTimePicker()
+        Me.DOBPicker = New System.Windows.Forms.DateTimePicker()
         Me.MaleRadio = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.FemaleRadio = New System.Windows.Forms.RadioButton()
@@ -186,13 +186,13 @@ Partial Class Form1
         Me.LastnameBox.Size = New System.Drawing.Size(217, 31)
         Me.LastnameBox.TabIndex = 8
         '
-        'DOB
+        'DOBPicker
         '
-        Me.DOB.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DOB.Location = New System.Drawing.Point(161, 468)
-        Me.DOB.Name = "DOB"
-        Me.DOB.Size = New System.Drawing.Size(217, 20)
-        Me.DOB.TabIndex = 9
+        Me.DOBPicker.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.DOBPicker.Location = New System.Drawing.Point(161, 468)
+        Me.DOBPicker.Name = "DOBPicker"
+        Me.DOBPicker.Size = New System.Drawing.Size(217, 20)
+        Me.DOBPicker.TabIndex = 9
         '
         'MaleRadio
         '
@@ -311,7 +311,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.ContactBox)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.DOB)
+        Me.Controls.Add(Me.DOBPicker)
         Me.Controls.Add(Me.LastnameBox)
         Me.Controls.Add(Me.FirstnameBox)
         Me.Controls.Add(Me.Panel3)
@@ -348,7 +348,7 @@ Partial Class Form1
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents FirstnameBox As System.Windows.Forms.TextBox
     Friend WithEvents LastnameBox As System.Windows.Forms.TextBox
-    Friend WithEvents DOB As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DOBPicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents MaleRadio As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents FemaleRadio As System.Windows.Forms.RadioButton
