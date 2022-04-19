@@ -78,4 +78,12 @@
     Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Private Sub CancelAddBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelAddBtn.Click
+        FirstnameBox.Text = ""
+        LastnameBox.Text = ""
+        ContactBox.Text = ""
+        MaleRadio.Checked = False
+        FemaleRadio.Checked = False
+    End Sub
 End Class
