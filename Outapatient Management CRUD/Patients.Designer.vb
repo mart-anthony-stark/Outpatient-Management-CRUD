@@ -22,9 +22,6 @@ Partial Class Patients
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.PatientDataGrid = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -59,10 +56,9 @@ Partial Class Patients
         Me.EditLname = New System.Windows.Forms.TextBox()
         Me.EditFname = New System.Windows.Forms.TextBox()
         Me.EditSaveBtn = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.EditCancelBtn = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Panel1.SuspendLayout()
+        Me.DeleteBtn = New System.Windows.Forms.Button()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -70,65 +66,31 @@ Partial Class Patients
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.Button1)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1017, 43)
-        Me.Panel1.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(3, 9)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(347, 25)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Outpatient Management System"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Button1.Location = New System.Drawing.Point(978, 9)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(27, 22)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "X"
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'PatientDataGrid
         '
         Me.PatientDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.PatientDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.PatientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.PatientDataGrid.Location = New System.Drawing.Point(57, 53)
+        Me.PatientDataGrid.Location = New System.Drawing.Point(19, 53)
         Me.PatientDataGrid.Name = "PatientDataGrid"
-        Me.PatientDataGrid.Size = New System.Drawing.Size(928, 237)
+        Me.PatientDataGrid.Size = New System.Drawing.Size(942, 237)
         Me.PatientDataGrid.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PatientDataGrid)
-        Me.Panel2.Location = New System.Drawing.Point(0, 40)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1014, 308)
+        Me.Panel2.Size = New System.Drawing.Size(1266, 308)
         Me.Panel2.TabIndex = 2
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(54, 25)
+        Me.Label2.Location = New System.Drawing.Point(21, 25)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(90, 25)
         Me.Label2.TabIndex = 1
@@ -140,7 +102,7 @@ Partial Class Patients
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
-        Me.AddBtn.Location = New System.Drawing.Point(166, 667)
+        Me.AddBtn.Location = New System.Drawing.Point(171, 619)
         Me.AddBtn.Name = "AddBtn"
         Me.AddBtn.Size = New System.Drawing.Size(84, 39)
         Me.AddBtn.TabIndex = 3
@@ -153,7 +115,7 @@ Partial Class Patients
         Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBtn.ForeColor = System.Drawing.Color.White
-        Me.SearchBtn.Location = New System.Drawing.Point(885, 360)
+        Me.SearchBtn.Location = New System.Drawing.Point(881, 318)
         Me.SearchBtn.Name = "SearchBtn"
         Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
         Me.SearchBtn.TabIndex = 4
@@ -173,7 +135,7 @@ Partial Class Patients
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.SearchBox)
-        Me.Panel3.Location = New System.Drawing.Point(711, 360)
+        Me.Panel3.Location = New System.Drawing.Point(707, 318)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(168, 39)
         Me.Panel3.TabIndex = 6
@@ -190,7 +152,7 @@ Partial Class Patients
         'FirstnameBox
         '
         Me.FirstnameBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FirstnameBox.Location = New System.Drawing.Point(166, 419)
+        Me.FirstnameBox.Location = New System.Drawing.Point(171, 371)
         Me.FirstnameBox.Name = "FirstnameBox"
         Me.FirstnameBox.Size = New System.Drawing.Size(217, 31)
         Me.FirstnameBox.TabIndex = 7
@@ -198,7 +160,7 @@ Partial Class Patients
         'LastnameBox
         '
         Me.LastnameBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LastnameBox.Location = New System.Drawing.Point(166, 468)
+        Me.LastnameBox.Location = New System.Drawing.Point(171, 420)
         Me.LastnameBox.Name = "LastnameBox"
         Me.LastnameBox.Size = New System.Drawing.Size(217, 31)
         Me.LastnameBox.TabIndex = 8
@@ -206,7 +168,7 @@ Partial Class Patients
         'DOBPicker
         '
         Me.DOBPicker.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DOBPicker.Location = New System.Drawing.Point(166, 519)
+        Me.DOBPicker.Location = New System.Drawing.Point(171, 471)
         Me.DOBPicker.Name = "DOBPicker"
         Me.DOBPicker.Size = New System.Drawing.Size(217, 20)
         Me.DOBPicker.TabIndex = 9
@@ -226,7 +188,7 @@ Partial Class Patients
         '
         Me.GroupBox1.Controls.Add(Me.FemaleRadio)
         Me.GroupBox1.Controls.Add(Me.MaleRadio)
-        Me.GroupBox1.Location = New System.Drawing.Point(166, 554)
+        Me.GroupBox1.Location = New System.Drawing.Point(171, 506)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(188, 46)
         Me.GroupBox1.TabIndex = 11
@@ -247,7 +209,7 @@ Partial Class Patients
         'ContactBox
         '
         Me.ContactBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactBox.Location = New System.Drawing.Point(166, 616)
+        Me.ContactBox.Location = New System.Drawing.Point(171, 568)
         Me.ContactBox.Name = "ContactBox"
         Me.ContactBox.Size = New System.Drawing.Size(217, 31)
         Me.ContactBox.TabIndex = 12
@@ -257,7 +219,7 @@ Partial Class Patients
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(57, 419)
+        Me.Label4.Location = New System.Drawing.Point(62, 371)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 25)
         Me.Label4.TabIndex = 13
@@ -268,7 +230,7 @@ Partial Class Patients
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label5.Location = New System.Drawing.Point(57, 471)
+        Me.Label5.Location = New System.Drawing.Point(62, 423)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 25)
         Me.Label5.TabIndex = 14
@@ -279,7 +241,7 @@ Partial Class Patients
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label6.Location = New System.Drawing.Point(58, 514)
+        Me.Label6.Location = New System.Drawing.Point(63, 466)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 25)
         Me.Label6.TabIndex = 15
@@ -290,7 +252,7 @@ Partial Class Patients
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label7.Location = New System.Drawing.Point(57, 565)
+        Me.Label7.Location = New System.Drawing.Point(62, 517)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 25)
         Me.Label7.TabIndex = 16
@@ -301,7 +263,7 @@ Partial Class Patients
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label8.Location = New System.Drawing.Point(57, 616)
+        Me.Label8.Location = New System.Drawing.Point(62, 568)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 25)
         Me.Label8.TabIndex = 17
@@ -313,7 +275,7 @@ Partial Class Patients
         Me.CancelAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelAddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelAddBtn.ForeColor = System.Drawing.Color.White
-        Me.CancelAddBtn.Location = New System.Drawing.Point(299, 667)
+        Me.CancelAddBtn.Location = New System.Drawing.Point(304, 619)
         Me.CancelAddBtn.Name = "CancelAddBtn"
         Me.CancelAddBtn.Size = New System.Drawing.Size(84, 39)
         Me.CancelAddBtn.TabIndex = 18
@@ -325,7 +287,7 @@ Partial Class Patients
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(553, 616)
+        Me.Label9.Location = New System.Drawing.Point(549, 574)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 25)
         Me.Label9.TabIndex = 28
@@ -336,7 +298,7 @@ Partial Class Patients
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label10.Location = New System.Drawing.Point(553, 565)
+        Me.Label10.Location = New System.Drawing.Point(549, 523)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 25)
         Me.Label10.TabIndex = 27
@@ -347,7 +309,7 @@ Partial Class Patients
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label11.Location = New System.Drawing.Point(554, 514)
+        Me.Label11.Location = New System.Drawing.Point(550, 472)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(98, 25)
         Me.Label11.TabIndex = 26
@@ -358,7 +320,7 @@ Partial Class Patients
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label12.Location = New System.Drawing.Point(553, 471)
+        Me.Label12.Location = New System.Drawing.Point(549, 429)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(106, 25)
         Me.Label12.TabIndex = 25
@@ -369,7 +331,7 @@ Partial Class Patients
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label13.Location = New System.Drawing.Point(553, 419)
+        Me.Label13.Location = New System.Drawing.Point(549, 377)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(107, 25)
         Me.Label13.TabIndex = 24
@@ -378,7 +340,7 @@ Partial Class Patients
         'EditContact
         '
         Me.EditContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditContact.Location = New System.Drawing.Point(662, 616)
+        Me.EditContact.Location = New System.Drawing.Point(658, 574)
         Me.EditContact.Name = "EditContact"
         Me.EditContact.Size = New System.Drawing.Size(217, 31)
         Me.EditContact.TabIndex = 23
@@ -387,7 +349,7 @@ Partial Class Patients
         '
         Me.GroupBox2.Controls.Add(Me.EditFemaleRadio)
         Me.GroupBox2.Controls.Add(Me.EditMaleRadio)
-        Me.GroupBox2.Location = New System.Drawing.Point(662, 554)
+        Me.GroupBox2.Location = New System.Drawing.Point(658, 512)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(188, 46)
         Me.GroupBox2.TabIndex = 22
@@ -419,7 +381,7 @@ Partial Class Patients
         'EditDOB
         '
         Me.EditDOB.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EditDOB.Location = New System.Drawing.Point(662, 519)
+        Me.EditDOB.Location = New System.Drawing.Point(658, 477)
         Me.EditDOB.Name = "EditDOB"
         Me.EditDOB.Size = New System.Drawing.Size(217, 20)
         Me.EditDOB.TabIndex = 21
@@ -427,7 +389,7 @@ Partial Class Patients
         'EditLname
         '
         Me.EditLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditLname.Location = New System.Drawing.Point(662, 468)
+        Me.EditLname.Location = New System.Drawing.Point(658, 426)
         Me.EditLname.Name = "EditLname"
         Me.EditLname.Size = New System.Drawing.Size(217, 31)
         Me.EditLname.TabIndex = 20
@@ -435,7 +397,7 @@ Partial Class Patients
         'EditFname
         '
         Me.EditFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditFname.Location = New System.Drawing.Point(662, 419)
+        Me.EditFname.Location = New System.Drawing.Point(658, 377)
         Me.EditFname.Name = "EditFname"
         Me.EditFname.Size = New System.Drawing.Size(217, 31)
         Me.EditFname.TabIndex = 19
@@ -446,58 +408,61 @@ Partial Class Patients
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
-        Me.EditSaveBtn.Location = New System.Drawing.Point(662, 667)
+        Me.EditSaveBtn.Location = New System.Drawing.Point(658, 625)
         Me.EditSaveBtn.Name = "EditSaveBtn"
         Me.EditSaveBtn.Size = New System.Drawing.Size(77, 39)
         Me.EditSaveBtn.TabIndex = 29
         Me.EditSaveBtn.Text = "Save"
         Me.EditSaveBtn.UseVisualStyleBackColor = False
+        Me.EditSaveBtn.Visible = False
         '
-        'Button3
+        'EditCancelBtn
         '
-        Me.Button3.BackColor = System.Drawing.Color.Gray
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(867, 667)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(80, 39)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "Cancel"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.EditCancelBtn.BackColor = System.Drawing.Color.Gray
+        Me.EditCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EditCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditCancelBtn.ForeColor = System.Drawing.Color.White
+        Me.EditCancelBtn.Location = New System.Drawing.Point(863, 625)
+        Me.EditCancelBtn.Name = "EditCancelBtn"
+        Me.EditCancelBtn.Size = New System.Drawing.Size(80, 39)
+        Me.EditCancelBtn.TabIndex = 30
+        Me.EditCancelBtn.Text = "Cancel"
+        Me.EditCancelBtn.UseVisualStyleBackColor = False
+        Me.EditCancelBtn.Visible = False
         '
         'Label14
         '
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label14.Location = New System.Drawing.Point(554, 367)
+        Me.Label14.Location = New System.Drawing.Point(550, 325)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 25)
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "EDIT"
         '
-        'Button2
+        'DeleteBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Brown
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(765, 667)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(80, 39)
-        Me.Button2.TabIndex = 32
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.DeleteBtn.BackColor = System.Drawing.Color.Brown
+        Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.DeleteBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DeleteBtn.ForeColor = System.Drawing.Color.White
+        Me.DeleteBtn.Location = New System.Drawing.Point(761, 625)
+        Me.DeleteBtn.Name = "DeleteBtn"
+        Me.DeleteBtn.Size = New System.Drawing.Size(80, 39)
+        Me.DeleteBtn.TabIndex = 32
+        Me.DeleteBtn.Text = "Delete"
+        Me.DeleteBtn.UseVisualStyleBackColor = False
+        Me.DeleteBtn.Visible = False
         '
         'Patients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 725)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(1266, 715)
+        Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.EditCancelBtn)
         Me.Controls.Add(Me.EditSaveBtn)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label10)
@@ -523,13 +488,9 @@ Partial Class Patients
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.SearchBtn)
         Me.Controls.Add(Me.AddBtn)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Patients"
-        Me.Text = "t"
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
@@ -543,9 +504,6 @@ Partial Class Patients
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PatientDataGrid As System.Windows.Forms.DataGridView
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
@@ -580,8 +538,8 @@ Partial Class Patients
     Friend WithEvents EditLname As System.Windows.Forms.TextBox
     Friend WithEvents EditFname As System.Windows.Forms.TextBox
     Friend WithEvents EditSaveBtn As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents EditCancelBtn As System.Windows.Forms.Button
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents DeleteBtn As System.Windows.Forms.Button
 
 End Class
