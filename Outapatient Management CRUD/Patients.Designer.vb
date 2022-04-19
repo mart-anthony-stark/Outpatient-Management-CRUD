@@ -59,6 +59,7 @@ Partial Class Patients
         Me.EditCancelBtn = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.DeleteBtn = New System.Windows.Forms.Button()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -98,7 +99,7 @@ Partial Class Patients
         '
         'AddBtn
         '
-        Me.AddBtn.BackColor = System.Drawing.Color.SteelBlue
+        Me.AddBtn.BackColor = System.Drawing.Color.Green
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
@@ -455,6 +456,14 @@ Partial Class Patients
         Me.DeleteBtn.UseVisualStyleBackColor = False
         Me.DeleteBtn.Visible = False
         '
+        'Panel1
+        '
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1266, 715)
+        Me.Panel1.TabIndex = 33
+        '
         'Patients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -489,6 +498,7 @@ Partial Class Patients
         Me.Controls.Add(Me.SearchBtn)
         Me.Controls.Add(Me.AddBtn)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Patients"
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
@@ -541,5 +551,6 @@ Partial Class Patients
     Friend WithEvents EditCancelBtn As System.Windows.Forms.Button
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents DeleteBtn As System.Windows.Forms.Button
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
 
 End Class
