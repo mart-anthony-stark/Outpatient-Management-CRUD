@@ -16,7 +16,32 @@
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddBtn.Click
-
+        Dim firstname, lastname, dob, sex, contact As String
+        firstname = FirstnameBox.Text
+        lastname = LastnameBox.Text
+        dob = Format(DOBPicker.Value, "yyyy-MM-dd")
+        If (MaleRadio.Checked) Then
+            sex = "M"
+        ElseIf (FemaleRadio.Checked) Then
+            sex = "F"
+        End If
+        contact = ContactBox.Text
+        If (String.IsNullOrEmpty(firstname) Or String.IsNullOrEmpty(lastname) Or String.IsNullOrEmpty(dob) Or String.IsNullOrEmpty(sex) Or String.IsNullOrEmpty(contact)) Then
+            MsgBox("You must fill all input fields to add")
+        Else
+            Try
+                readuery("INSERT INTO patient VALUES(null, '" & firstname & "', '" & lastname & "', '" & dob & "', '" & sex & "', '" & contact & "')")
+                MsgBox("Patient was successfully added to database")
+                reload("SELECT patient_id AS ID, concat(firstname, ' ',lastname) AS Name, date_of_birth AS 'Date of Birth', sex AS Sex, contact_number AS Contact FROM patient", PatientDataGrid)
+                FirstnameBox.Text = ""
+                LastnameBox.Text = ""
+                MaleRadio.Checked = False
+                FemaleRadio.Checked = False
+                ContactBox.Text = ""
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub SearchBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBtn.Click
