@@ -61,6 +61,7 @@ Partial Class Patients
         Me.EditSaveBtn = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -445,22 +446,22 @@ Partial Class Patients
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
-        Me.EditSaveBtn.Location = New System.Drawing.Point(662, 683)
+        Me.EditSaveBtn.Location = New System.Drawing.Point(662, 667)
         Me.EditSaveBtn.Name = "EditSaveBtn"
-        Me.EditSaveBtn.Size = New System.Drawing.Size(120, 39)
+        Me.EditSaveBtn.Size = New System.Drawing.Size(77, 39)
         Me.EditSaveBtn.TabIndex = 29
         Me.EditSaveBtn.Text = "Save"
         Me.EditSaveBtn.UseVisualStyleBackColor = False
         '
         'Button3
         '
-        Me.Button3.BackColor = System.Drawing.Color.Brown
+        Me.Button3.BackColor = System.Drawing.Color.Gray
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(799, 683)
+        Me.Button3.Location = New System.Drawing.Point(867, 667)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 39)
+        Me.Button3.Size = New System.Drawing.Size(80, 39)
         Me.Button3.TabIndex = 30
         Me.Button3.Text = "Cancel"
         Me.Button3.UseVisualStyleBackColor = False
@@ -476,11 +477,25 @@ Partial Class Patients
         Me.Label14.TabIndex = 31
         Me.Label14.Text = "EDIT"
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Brown
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(765, 667)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(80, 39)
+        Me.Button2.TabIndex = 32
+        Me.Button2.Text = "Delete"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Patients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1017, 725)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.EditSaveBtn)
@@ -567,5 +582,6 @@ Partial Class Patients
     Friend WithEvents EditSaveBtn As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label14 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 
 End Class
