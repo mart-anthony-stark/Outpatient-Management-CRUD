@@ -77,13 +77,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBModule.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Patients.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Patients.Designer.vb">
+      <DependentUpon>Patients.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="HelperModule.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -101,8 +102,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Patients.resx">
+      <DependentUpon>Patients.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
