@@ -22,7 +22,6 @@ Module DBModule
             With cmd
                 .Connection = strconn
                 .CommandText = sql
-
             End With
             da.SelectCommand = cmd
             da.Fill(dt)
