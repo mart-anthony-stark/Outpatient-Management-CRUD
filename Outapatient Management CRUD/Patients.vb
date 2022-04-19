@@ -2,20 +2,14 @@
     Private currentPatId As String
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.CenterToScreen()
         Try
-            'readuery("INSERT INTO patient VALUES(null, 'Juan', 'Dela Cruz', '2001-09-21', 'M', '09123456789')")'
             reload("SELECT patient_id AS ID, concat(firstname, ' ',lastname) AS Name, date_of_birth AS 'Date of Birth', sex AS Sex, contact_number AS Contact FROM patient", PatientDataGrid)
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
     End Sub
 
-
-    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Application.Exit()
-    End Sub
-
+    'Handles add patient'
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddBtn.Click
         Dim firstname, lastname, dob, sex, contact As String
         firstname = FirstnameBox.Text
@@ -45,6 +39,7 @@
         End If
     End Sub
 
+    'Handles search patient ID'
     Private Sub SearchBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBtn.Click
         Dim id As String
         id = SearchBox.Text
@@ -71,19 +66,18 @@
         strconn.Close()
     End Sub
 
-    Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaleRadio.CheckedChanged
-
-    End Sub
-
-    Private Sub GroupBox1_Enter(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles GroupBox1.Enter
-
-    End Sub
-
     Private Sub CancelAddBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CancelAddBtn.Click
         FirstnameBox.Text = ""
         LastnameBox.Text = ""
         ContactBox.Text = ""
         MaleRadio.Checked = False
         FemaleRadio.Checked = False
+    End Sub
+
+    Private Sub ToggleBtns()
+        Dim state As Boolean = Not String.IsNullOrEmpty(currentPatId)
+        EditCancelBtn.Visible = state
+        DeleteBtn.Visible = state
+        EditSaveBtn.Visible = state
     End Sub
 End Class
