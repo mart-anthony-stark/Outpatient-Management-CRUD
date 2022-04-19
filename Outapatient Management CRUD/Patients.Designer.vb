@@ -45,12 +45,28 @@ Partial Class Patients
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.CancelAddBtn = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.EditContact = New System.Windows.Forms.TextBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.EditFemaleRadio = New System.Windows.Forms.RadioButton()
+        Me.EditMaleRadio = New System.Windows.Forms.RadioButton()
+        Me.EditDOB = New System.Windows.Forms.DateTimePicker()
+        Me.EditLname = New System.Windows.Forms.TextBox()
+        Me.EditFname = New System.Windows.Forms.TextBox()
+        Me.EditSaveBtn = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label14 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -123,7 +139,7 @@ Partial Class Patients
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
-        Me.AddBtn.Location = New System.Drawing.Point(161, 616)
+        Me.AddBtn.Location = New System.Drawing.Point(166, 667)
         Me.AddBtn.Name = "AddBtn"
         Me.AddBtn.Size = New System.Drawing.Size(84, 39)
         Me.AddBtn.TabIndex = 3
@@ -136,7 +152,7 @@ Partial Class Patients
         Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBtn.ForeColor = System.Drawing.Color.White
-        Me.SearchBtn.Location = New System.Drawing.Point(836, 363)
+        Me.SearchBtn.Location = New System.Drawing.Point(885, 360)
         Me.SearchBtn.Name = "SearchBtn"
         Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
         Me.SearchBtn.TabIndex = 4
@@ -156,7 +172,7 @@ Partial Class Patients
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.SearchBox)
-        Me.Panel3.Location = New System.Drawing.Point(662, 363)
+        Me.Panel3.Location = New System.Drawing.Point(711, 360)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(168, 39)
         Me.Panel3.TabIndex = 6
@@ -173,7 +189,7 @@ Partial Class Patients
         'FirstnameBox
         '
         Me.FirstnameBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.FirstnameBox.Location = New System.Drawing.Point(161, 368)
+        Me.FirstnameBox.Location = New System.Drawing.Point(166, 419)
         Me.FirstnameBox.Name = "FirstnameBox"
         Me.FirstnameBox.Size = New System.Drawing.Size(217, 31)
         Me.FirstnameBox.TabIndex = 7
@@ -181,7 +197,7 @@ Partial Class Patients
         'LastnameBox
         '
         Me.LastnameBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LastnameBox.Location = New System.Drawing.Point(161, 417)
+        Me.LastnameBox.Location = New System.Drawing.Point(166, 468)
         Me.LastnameBox.Name = "LastnameBox"
         Me.LastnameBox.Size = New System.Drawing.Size(217, 31)
         Me.LastnameBox.TabIndex = 8
@@ -189,7 +205,7 @@ Partial Class Patients
         'DOBPicker
         '
         Me.DOBPicker.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.DOBPicker.Location = New System.Drawing.Point(161, 468)
+        Me.DOBPicker.Location = New System.Drawing.Point(166, 519)
         Me.DOBPicker.Name = "DOBPicker"
         Me.DOBPicker.Size = New System.Drawing.Size(217, 20)
         Me.DOBPicker.TabIndex = 9
@@ -209,7 +225,7 @@ Partial Class Patients
         '
         Me.GroupBox1.Controls.Add(Me.FemaleRadio)
         Me.GroupBox1.Controls.Add(Me.MaleRadio)
-        Me.GroupBox1.Location = New System.Drawing.Point(161, 503)
+        Me.GroupBox1.Location = New System.Drawing.Point(166, 554)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(188, 46)
         Me.GroupBox1.TabIndex = 11
@@ -230,7 +246,7 @@ Partial Class Patients
         'ContactBox
         '
         Me.ContactBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ContactBox.Location = New System.Drawing.Point(161, 565)
+        Me.ContactBox.Location = New System.Drawing.Point(166, 616)
         Me.ContactBox.Name = "ContactBox"
         Me.ContactBox.Size = New System.Drawing.Size(217, 31)
         Me.ContactBox.TabIndex = 12
@@ -239,7 +255,8 @@ Partial Class Patients
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(52, 368)
+        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.Location = New System.Drawing.Point(57, 419)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 25)
         Me.Label4.TabIndex = 13
@@ -249,7 +266,8 @@ Partial Class Patients
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(52, 420)
+        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.Location = New System.Drawing.Point(57, 471)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 25)
         Me.Label5.TabIndex = 14
@@ -259,7 +277,8 @@ Partial Class Patients
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(53, 463)
+        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.Location = New System.Drawing.Point(58, 514)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 25)
         Me.Label6.TabIndex = 15
@@ -269,7 +288,8 @@ Partial Class Patients
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(52, 514)
+        Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label7.Location = New System.Drawing.Point(57, 565)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 25)
         Me.Label7.TabIndex = 16
@@ -279,31 +299,202 @@ Partial Class Patients
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(52, 565)
+        Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label8.Location = New System.Drawing.Point(57, 616)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 25)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "Contact"
         '
-        'Button2
+        'CancelAddBtn
         '
-        Me.Button2.BackColor = System.Drawing.Color.Brown
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(294, 616)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(84, 39)
-        Me.Button2.TabIndex = 18
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.CancelAddBtn.BackColor = System.Drawing.Color.Brown
+        Me.CancelAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CancelAddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CancelAddBtn.ForeColor = System.Drawing.Color.White
+        Me.CancelAddBtn.Location = New System.Drawing.Point(299, 667)
+        Me.CancelAddBtn.Name = "CancelAddBtn"
+        Me.CancelAddBtn.Size = New System.Drawing.Size(84, 39)
+        Me.CancelAddBtn.TabIndex = 18
+        Me.CancelAddBtn.Text = "Cancel"
+        Me.CancelAddBtn.UseVisualStyleBackColor = False
         '
-        'Form1
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label9.Location = New System.Drawing.Point(553, 616)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(86, 25)
+        Me.Label9.TabIndex = 28
+        Me.Label9.Text = "Contact"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label10.Location = New System.Drawing.Point(553, 565)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(49, 25)
+        Me.Label10.TabIndex = 27
+        Me.Label10.Text = "Sex"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label11.Location = New System.Drawing.Point(554, 514)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(98, 25)
+        Me.Label11.TabIndex = 26
+        Me.Label11.Text = "Birthdate"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label12.Location = New System.Drawing.Point(553, 471)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(106, 25)
+        Me.Label12.TabIndex = 25
+        Me.Label12.Text = "Lastname"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label13.Location = New System.Drawing.Point(553, 419)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(107, 25)
+        Me.Label13.TabIndex = 24
+        Me.Label13.Text = "Firstname"
+        '
+        'EditContact
+        '
+        Me.EditContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditContact.Location = New System.Drawing.Point(662, 616)
+        Me.EditContact.Name = "EditContact"
+        Me.EditContact.Size = New System.Drawing.Size(217, 31)
+        Me.EditContact.TabIndex = 23
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.EditFemaleRadio)
+        Me.GroupBox2.Controls.Add(Me.EditMaleRadio)
+        Me.GroupBox2.Location = New System.Drawing.Point(662, 554)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(188, 46)
+        Me.GroupBox2.TabIndex = 22
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Sex"
+        '
+        'EditFemaleRadio
+        '
+        Me.EditFemaleRadio.AutoSize = True
+        Me.EditFemaleRadio.Location = New System.Drawing.Point(103, 19)
+        Me.EditFemaleRadio.Name = "EditFemaleRadio"
+        Me.EditFemaleRadio.Size = New System.Drawing.Size(59, 17)
+        Me.EditFemaleRadio.TabIndex = 11
+        Me.EditFemaleRadio.TabStop = True
+        Me.EditFemaleRadio.Text = "Female"
+        Me.EditFemaleRadio.UseVisualStyleBackColor = True
+        '
+        'EditMaleRadio
+        '
+        Me.EditMaleRadio.AutoSize = True
+        Me.EditMaleRadio.Location = New System.Drawing.Point(16, 19)
+        Me.EditMaleRadio.Name = "EditMaleRadio"
+        Me.EditMaleRadio.Size = New System.Drawing.Size(48, 17)
+        Me.EditMaleRadio.TabIndex = 10
+        Me.EditMaleRadio.TabStop = True
+        Me.EditMaleRadio.Text = "Male"
+        Me.EditMaleRadio.UseVisualStyleBackColor = True
+        '
+        'EditDOB
+        '
+        Me.EditDOB.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.EditDOB.Location = New System.Drawing.Point(662, 519)
+        Me.EditDOB.Name = "EditDOB"
+        Me.EditDOB.Size = New System.Drawing.Size(217, 20)
+        Me.EditDOB.TabIndex = 21
+        '
+        'EditLname
+        '
+        Me.EditLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditLname.Location = New System.Drawing.Point(662, 468)
+        Me.EditLname.Name = "EditLname"
+        Me.EditLname.Size = New System.Drawing.Size(217, 31)
+        Me.EditLname.TabIndex = 20
+        '
+        'EditFname
+        '
+        Me.EditFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditFname.Location = New System.Drawing.Point(662, 419)
+        Me.EditFname.Name = "EditFname"
+        Me.EditFname.Size = New System.Drawing.Size(217, 31)
+        Me.EditFname.TabIndex = 19
+        '
+        'EditSaveBtn
+        '
+        Me.EditSaveBtn.BackColor = System.Drawing.Color.Green
+        Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
+        Me.EditSaveBtn.Location = New System.Drawing.Point(662, 683)
+        Me.EditSaveBtn.Name = "EditSaveBtn"
+        Me.EditSaveBtn.Size = New System.Drawing.Size(120, 39)
+        Me.EditSaveBtn.TabIndex = 29
+        Me.EditSaveBtn.Text = "Save"
+        Me.EditSaveBtn.UseVisualStyleBackColor = False
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.Brown
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.White
+        Me.Button3.Location = New System.Drawing.Point(799, 683)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(120, 39)
+        Me.Button3.TabIndex = 30
+        Me.Button3.Text = "Cancel"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label14.Location = New System.Drawing.Point(554, 367)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(63, 25)
+        Me.Label14.TabIndex = 31
+        Me.Label14.Text = "EDIT"
+        '
+        'Patients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1017, 663)
-        Me.Controls.Add(Me.Button2)
+        Me.ClientSize = New System.Drawing.Size(1017, 725)
+        Me.Controls.Add(Me.Label14)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.EditSaveBtn)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.EditContact)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.EditDOB)
+        Me.Controls.Add(Me.EditLname)
+        Me.Controls.Add(Me.EditFname)
+        Me.Controls.Add(Me.CancelAddBtn)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
@@ -320,7 +511,7 @@ Partial Class Patients
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Form1"
+        Me.Name = "Patients"
         Me.Text = "t"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
@@ -331,6 +522,8 @@ Partial Class Patients
         Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -358,6 +551,21 @@ Partial Class Patients
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents CancelAddBtn As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents EditContact As System.Windows.Forms.TextBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents EditFemaleRadio As System.Windows.Forms.RadioButton
+    Friend WithEvents EditMaleRadio As System.Windows.Forms.RadioButton
+    Friend WithEvents EditDOB As System.Windows.Forms.DateTimePicker
+    Friend WithEvents EditLname As System.Windows.Forms.TextBox
+    Friend WithEvents EditFname As System.Windows.Forms.TextBox
+    Friend WithEvents EditSaveBtn As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Label14 As System.Windows.Forms.Label
 
 End Class
