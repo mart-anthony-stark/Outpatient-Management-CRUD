@@ -3,7 +3,7 @@ Module DBModule
     Public Function strconnection() As MySqlConnection
         Dim MysqlConn As MySqlConnection
         MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=localhost;userid=root;password=;database=outpatient;CharSet=utf8;"
+        MysqlConn.ConnectionString = "server=localhost;userid=root;password=;database=outpatient;CharSet=utf8;Convert Zero Datetime=True"
         Return MysqlConn
     End Function
 
