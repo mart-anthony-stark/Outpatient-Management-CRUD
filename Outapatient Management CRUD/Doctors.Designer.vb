@@ -40,6 +40,7 @@ Partial Class Doctors
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(760, 402)
         Me.Controls.Add(Me.Button1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Doctors"
         Me.Text = "Doctors"
         Me.ResumeLayout(False)
