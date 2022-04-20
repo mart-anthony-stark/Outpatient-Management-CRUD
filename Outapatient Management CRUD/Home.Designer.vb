@@ -23,7 +23,6 @@ Partial Class Home
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.PanelContainer = New System.Windows.Forms.Panel()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -34,29 +33,21 @@ Partial Class Home
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.AppointmentsBtn = New System.Windows.Forms.Button()
         Me.DoctorsBtn = New System.Windows.Forms.Button()
-        Me.PatentsBtn = New System.Windows.Forms.Button()
+        Me.PatientsBtn = New System.Windows.Forms.Button()
         Me.DashboardBtn = New System.Windows.Forms.Button()
-        Me.PanelContainer.SuspendLayout()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelContainer
         '
-        Me.PanelContainer.Controls.Add(Me.ToolStrip1)
         Me.PanelContainer.Location = New System.Drawing.Point(238, 57)
         Me.PanelContainer.Name = "PanelContainer"
         Me.PanelContainer.Size = New System.Drawing.Size(1109, 715)
         Me.PanelContainer.TabIndex = 0
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(1109, 25)
-        Me.ToolStrip1.TabIndex = 0
-        Me.ToolStrip1.Text = "ToolStrip1"
         '
         'Panel1
         '
@@ -74,6 +65,7 @@ Partial Class Home
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(181, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.PictureBox1)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
@@ -83,11 +75,11 @@ Partial Class Home
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(94, 9)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(68, 32)
+        Me.Label2.Size = New System.Drawing.Size(69, 32)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "OMS"
         '
@@ -135,7 +127,7 @@ Partial Class Home
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.AppointmentsBtn)
         Me.Panel2.Controls.Add(Me.DoctorsBtn)
-        Me.Panel2.Controls.Add(Me.PatentsBtn)
+        Me.Panel2.Controls.Add(Me.PatientsBtn)
         Me.Panel2.Controls.Add(Me.DashboardBtn)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 51)
@@ -175,30 +167,32 @@ Partial Class Home
         Me.DoctorsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.DoctorsBtn.UseVisualStyleBackColor = False
         '
-        'PatentsBtn
+        'PatientsBtn
         '
-        Me.PatentsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
-        Me.PatentsBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.PatentsBtn.FlatAppearance.BorderSize = 0
-        Me.PatentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.PatentsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.PatentsBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.PatentsBtn.Location = New System.Drawing.Point(3, 159)
-        Me.PatentsBtn.Name = "PatentsBtn"
-        Me.PatentsBtn.Size = New System.Drawing.Size(227, 50)
-        Me.PatentsBtn.TabIndex = 1
-        Me.PatentsBtn.Text = "Patients"
-        Me.PatentsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PatentsBtn.UseVisualStyleBackColor = False
+        Me.PatientsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.PatientsBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PatientsBtn.FlatAppearance.BorderSize = 0
+        Me.PatientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.PatientsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PatientsBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.PatientsBtn.Location = New System.Drawing.Point(3, 159)
+        Me.PatientsBtn.Name = "PatientsBtn"
+        Me.PatientsBtn.Size = New System.Drawing.Size(227, 50)
+        Me.PatientsBtn.TabIndex = 1
+        Me.PatientsBtn.Text = "Patients"
+        Me.PatientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.PatientsBtn.UseVisualStyleBackColor = False
         '
         'DashboardBtn
         '
         Me.DashboardBtn.BackColor = System.Drawing.Color.White
+        Me.DashboardBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.DashboardBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.DashboardBtn.FlatAppearance.BorderSize = 0
         Me.DashboardBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DashboardBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DashboardBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.DashboardBtn.Location = New System.Drawing.Point(2, 106)
         Me.DashboardBtn.Name = "DashboardBtn"
         Me.DashboardBtn.Size = New System.Drawing.Size(227, 50)
@@ -206,6 +200,16 @@ Partial Class Home
         Me.DashboardBtn.Text = "Dashboard"
         Me.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.DashboardBtn.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'Home
         '
@@ -219,13 +223,12 @@ Partial Class Home
         Me.Name = "Home"
         Me.Text = "Outpatient Management System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.PanelContainer.ResumeLayout(False)
-        Me.PanelContainer.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel2.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -236,11 +239,11 @@ Partial Class Home
     Friend WithEvents ExitBtn As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
-    Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents AppointmentsBtn As System.Windows.Forms.Button
     Friend WithEvents DoctorsBtn As System.Windows.Forms.Button
-    Friend WithEvents PatentsBtn As System.Windows.Forms.Button
+    Friend WithEvents PatientsBtn As System.Windows.Forms.Button
     Friend WithEvents DashboardBtn As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class
