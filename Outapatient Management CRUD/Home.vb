@@ -23,7 +23,7 @@
         form.Show()
     End Sub
 
-    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PatentsBtn.Click
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PatientsBtn.Click
         LoadForm(Patients)
     End Sub
 
@@ -32,6 +32,19 @@
     End Sub
 
     Private Sub RefreshBtnsStyles()
-        MsgBox(activePanel)
+        DashboardBtn.BackColor = Color.FromArgb(255, 255, 255)
+        PatientsBtn.BackColor = Color.FromArgb(255, 255, 255)
+        AppointmentsBtn.BackColor = Color.FromArgb(255, 255, 255)
+        DoctorsBtn.BackColor = Color.FromArgb(255, 255, 255)
+
+        If (activePanel.Equals("Dashboard")) Then
+            DashboardBtn.BackColor = Color.FromArgb(239, 243, 246)
+        ElseIf (activePanel.Equals("Patients")) Then
+            PatientsBtn.BackColor = Color.FromArgb(239, 243, 246)
+        ElseIf (activePanel.Equals("Doctors")) Then
+            DoctorsBtn.BackColor = Color.FromArgb(239, 243, 246)
+        ElseIf (activePanel.Equals("Appointment")) Then
+            AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
+        End If
     End Sub
 End Class
