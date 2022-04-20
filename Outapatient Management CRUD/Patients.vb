@@ -55,7 +55,16 @@
                 cmdread = .ExecuteReader
                 If (cmdread.Read()) Then
                     currentPatId = cmdread.GetString(0)
-                    MsgBox("currentPatId: " & currentPatId)
+                    EditFname.Text = cmdread.GetString(1)
+                    EditLname.Text = cmdread.GetString(2)
+                    EditDOB.Value = cmdread.GetDateTime(3)
+                    If (cmdread.GetString(4).Equals("M")) Then
+                        EditMaleRadio.Checked = True
+                    Else
+                        EditFemaleRadio.Checked = True
+                    End If
+                    EditContact.Text = cmdread.GetString(5)
+                    ToggleBtns()
                 Else
                     MsgBox("Patient is not found in database using the id you specified")
                 End If
@@ -72,6 +81,8 @@
         ContactBox.Text = ""
         MaleRadio.Checked = False
         FemaleRadio.Checked = False
+        currentPatId = Nothing
+        ToggleBtns()
     End Sub
 
     Private Sub ToggleBtns()
@@ -79,5 +90,17 @@
         EditCancelBtn.Visible = state
         DeleteBtn.Visible = state
         EditSaveBtn.Visible = state
+    End Sub
+
+    Private Sub EditCancelBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditCancelBtn.Click
+        currentPatId = Nothing
+        EditFname.Text = ""
+        EditLname.Text = ""
+        EditContact.Text = ""
+        EditDOB.Value = Today
+        EditFemaleRadio.Checked = False
+        EditMaleRadio.Checked = False
+        SearchBox.Text = ""
+        ToggleBtns()
     End Sub
 End Class
