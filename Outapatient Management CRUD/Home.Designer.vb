@@ -143,7 +143,7 @@ Partial Class Home
         Me.AppointmentsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AppointmentsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AppointmentsBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.AppointmentsBtn.Location = New System.Drawing.Point(3, 268)
+        Me.AppointmentsBtn.Location = New System.Drawing.Point(3, 262)
         Me.AppointmentsBtn.Name = "AppointmentsBtn"
         Me.AppointmentsBtn.Size = New System.Drawing.Size(227, 50)
         Me.AppointmentsBtn.TabIndex = 3
@@ -159,7 +159,7 @@ Partial Class Home
         Me.DoctorsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DoctorsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DoctorsBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.DoctorsBtn.Location = New System.Drawing.Point(3, 214)
+        Me.DoctorsBtn.Location = New System.Drawing.Point(3, 211)
         Me.DoctorsBtn.Name = "DoctorsBtn"
         Me.DoctorsBtn.Size = New System.Drawing.Size(227, 50)
         Me.DoctorsBtn.TabIndex = 2
@@ -169,7 +169,7 @@ Partial Class Home
         '
         'PatientsBtn
         '
-        Me.PatientsBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(243, Byte), Integer), CType(CType(246, Byte), Integer))
+        Me.PatientsBtn.BackColor = System.Drawing.Color.White
         Me.PatientsBtn.Cursor = System.Windows.Forms.Cursors.Hand
         Me.PatientsBtn.FlatAppearance.BorderSize = 0
         Me.PatientsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -193,7 +193,7 @@ Partial Class Home
         Me.DashboardBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DashboardBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
         Me.DashboardBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.DashboardBtn.Location = New System.Drawing.Point(2, 106)
+        Me.DashboardBtn.Location = New System.Drawing.Point(2, 107)
         Me.DashboardBtn.Name = "DashboardBtn"
         Me.DashboardBtn.Size = New System.Drawing.Size(227, 50)
         Me.DashboardBtn.TabIndex = 0
