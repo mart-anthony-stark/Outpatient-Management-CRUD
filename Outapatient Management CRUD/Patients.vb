@@ -93,6 +93,10 @@
     End Sub
 
     Private Sub EditCancelBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditCancelBtn.Click
+        ClearEdit()
+    End Sub
+
+    Private Sub ClearEdit()
         currentPatId = Nothing
         EditFname.Text = ""
         EditLname.Text = ""
@@ -102,5 +106,30 @@
         EditMaleRadio.Checked = False
         SearchBox.Text = ""
         ToggleBtns()
+    End Sub
+
+    Private Sub EditSaveBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditSaveBtn.Click
+        Dim fname, lname, dob, sex, contact As String
+        fname = EditFname.Text
+        lname = EditLname.Text
+        dob = Format(EditDOB.Value, "yyyy-MM-dd")
+        If (EditMaleRadio.Checked) Then
+            sex = "M"
+        ElseIf (EditFemaleRadio.Checked) Then
+            sex = "F"
+        End If
+        contact = EditContact.Text
+        If (String.IsNullOrEmpty(fname) Or String.IsNullOrEmpty(lname) Or String.IsNullOrEmpty(dob) Or String.IsNullOrEmpty(sex) Or String.IsNullOrEmpty(contact)) Then
+            MsgBox("You must fill all input fields to add")
+        Else
+            Try
+                readuery("UPDATE patient SET firstname='" & fname & "', lastname='" & lname & "', date_of_birth='" & dob & "', sex='" & sex & "', contact_number='" & contact & "' WHERE patient_id=" & currentPatId & "")
+                MsgBox("Patient record was successfully updated")
+                reload("SELECT patient_id AS ID, concat(firstname, ' ',lastname) AS Name, date_of_birth AS 'Date of Birth', sex AS Sex, contact_number AS Contact FROM patient", PatientDataGrid)
+                ClearEdit()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
     End Sub
 End Class
