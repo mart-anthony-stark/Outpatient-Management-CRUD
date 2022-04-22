@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Home
+Partial Class Main
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -46,7 +46,7 @@ Partial Class Home
         '
         Me.PanelContainer.Location = New System.Drawing.Point(238, 57)
         Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(1109, 715)
+        Me.PanelContainer.Size = New System.Drawing.Size(1121, 715)
         Me.PanelContainer.TabIndex = 0
         '
         'Panel1
@@ -211,7 +211,7 @@ Partial Class Home
         Me.PictureBox1.TabIndex = 4
         Me.PictureBox1.TabStop = False
         '
-        'Home
+        'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -220,7 +220,7 @@ Partial Class Home
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelContainer)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "Home"
+        Me.Name = "Main"
         Me.Text = "Outpatient Management System"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.Panel1.ResumeLayout(False)
