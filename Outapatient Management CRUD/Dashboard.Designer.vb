@@ -31,6 +31,9 @@ Partial Class Dashboard
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.DoctorsCount = New System.Windows.Forms.Label()
+        Me.PatientsCount = New System.Windows.Forms.Label()
+        Me.AppointmentsCount = New System.Windows.Forms.Label()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -39,6 +42,8 @@ Partial Class Dashboard
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(76, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(72, 69)
@@ -51,6 +56,8 @@ Partial Class Dashboard
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(243, Byte), Integer))
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.ForeColor = System.Drawing.Color.White
         Me.Button2.Location = New System.Drawing.Point(412, 69)
@@ -63,6 +70,8 @@ Partial Class Dashboard
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(136, Byte), Integer))
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.ForeColor = System.Drawing.Color.White
         Me.Button3.Location = New System.Drawing.Point(752, 69)
@@ -147,12 +156,51 @@ Partial Class Dashboard
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'DoctorsCount
+        '
+        Me.DoctorsCount.AutoSize = True
+        Me.DoctorsCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(79, Byte), Integer), CType(CType(76, Byte), Integer))
+        Me.DoctorsCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DoctorsCount.ForeColor = System.Drawing.Color.White
+        Me.DoctorsCount.Location = New System.Drawing.Point(235, 91)
+        Me.DoctorsCount.Name = "DoctorsCount"
+        Me.DoctorsCount.Size = New System.Drawing.Size(39, 47)
+        Me.DoctorsCount.TabIndex = 9
+        Me.DoctorsCount.Text = "0"
+        '
+        'PatientsCount
+        '
+        Me.PatientsCount.AutoSize = True
+        Me.PatientsCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(243, Byte), Integer))
+        Me.PatientsCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PatientsCount.ForeColor = System.Drawing.Color.White
+        Me.PatientsCount.Location = New System.Drawing.Point(600, 91)
+        Me.PatientsCount.Name = "PatientsCount"
+        Me.PatientsCount.Size = New System.Drawing.Size(39, 47)
+        Me.PatientsCount.TabIndex = 10
+        Me.PatientsCount.Text = "0"
+        '
+        'AppointmentsCount
+        '
+        Me.AppointmentsCount.AutoSize = True
+        Me.AppointmentsCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(150, Byte), Integer), CType(CType(136, Byte), Integer))
+        Me.AppointmentsCount.Font = New System.Drawing.Font("Segoe UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AppointmentsCount.ForeColor = System.Drawing.Color.White
+        Me.AppointmentsCount.Location = New System.Drawing.Point(946, 91)
+        Me.AppointmentsCount.Name = "AppointmentsCount"
+        Me.AppointmentsCount.Size = New System.Drawing.Size(39, 47)
+        Me.AppointmentsCount.TabIndex = 11
+        Me.AppointmentsCount.Text = "0"
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1121, 715)
+        Me.Controls.Add(Me.AppointmentsCount)
+        Me.Controls.Add(Me.PatientsCount)
+        Me.Controls.Add(Me.DoctorsCount)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -182,4 +230,7 @@ Partial Class Dashboard
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents DoctorsCount As System.Windows.Forms.Label
+    Friend WithEvents PatientsCount As System.Windows.Forms.Label
+    Friend WithEvents AppointmentsCount As System.Windows.Forms.Label
 End Class
