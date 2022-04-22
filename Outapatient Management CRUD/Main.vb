@@ -43,12 +43,16 @@
             PatientsBtn.BackColor = Color.FromArgb(239, 243, 246)
         ElseIf (activePanel.Equals("Doctors")) Then
             DoctorsBtn.BackColor = Color.FromArgb(239, 243, 246)
-        ElseIf (activePanel.Equals("Appointment")) Then
+        ElseIf (activePanel.Equals("Appointments")) Then
             AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
         End If
     End Sub
 
     Private Sub DashboardBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DashboardBtn.Click
         LoadForm(Dashboard)
+    End Sub
+
+    Private Sub AppointmentsBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AppointmentsBtn.Click
+        LoadForm(Appointments)
     End Sub
 End Class
