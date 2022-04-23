@@ -2,6 +2,8 @@
     Dim activePanel As String
 
     Private Sub Home_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        DigitalClock.Text = TimeOfDay
+        DateTxt.Text = Today
         LoadForm(Dashboard)
     End Sub
 
@@ -54,5 +56,17 @@
 
     Private Sub AppointmentsBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AppointmentsBtn.Click
         LoadForm(Appointments)
+    End Sub
+
+    Private Sub ClockTimer_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ClockTimer.Tick
+        DigitalClock.Text = TimeOfDay
+    End Sub
+
+    Private Sub DigitalClock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DigitalClock.Click
+
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class
