@@ -2,6 +2,7 @@
 
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
         Try
             strconn.Open()
             With cmd
