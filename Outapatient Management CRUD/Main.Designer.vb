@@ -22,10 +22,12 @@ Partial Class Main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.PanelContainer = New System.Windows.Forms.Panel()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.MinimizeBtn = New System.Windows.Forms.Button()
@@ -35,18 +37,23 @@ Partial Class Main
         Me.DoctorsBtn = New System.Windows.Forms.Button()
         Me.PatientsBtn = New System.Windows.Forms.Button()
         Me.DashboardBtn = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ClockTimer = New System.Windows.Forms.Timer(Me.components)
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.DateTxt = New System.Windows.Forms.Label()
+        Me.DigitalClock = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelContainer
         '
         Me.PanelContainer.Location = New System.Drawing.Point(238, 57)
         Me.PanelContainer.Name = "PanelContainer"
-        Me.PanelContainer.Size = New System.Drawing.Size(1121, 715)
+        Me.PanelContainer.Size = New System.Drawing.Size(1121, 696)
         Me.PanelContainer.TabIndex = 0
         '
         'Panel1
@@ -71,6 +78,16 @@ Partial Class Main
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(232, 51)
         Me.Panel3.TabIndex = 3
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -125,6 +142,7 @@ Partial Class Main
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.AppointmentsBtn)
         Me.Panel2.Controls.Add(Me.DoctorsBtn)
         Me.Panel2.Controls.Add(Me.PatientsBtn)
@@ -201,21 +219,65 @@ Partial Class Main
         Me.DashboardBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.DashboardBtn.UseVisualStyleBackColor = False
         '
-        'PictureBox1
+        'ClockTimer
         '
-        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
+        Me.ClockTimer.Enabled = True
+        Me.ClockTimer.Interval = 1000
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.DateTxt)
+        Me.Panel4.Controls.Add(Me.DigitalClock)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.Panel4.Location = New System.Drawing.Point(232, 751)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1127, 33)
+        Me.Panel4.TabIndex = 3
+        '
+        'DateTxt
+        '
+        Me.DateTxt.AutoSize = True
+        Me.DateTxt.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateTxt.ForeColor = System.Drawing.Color.White
+        Me.DateTxt.Location = New System.Drawing.Point(1016, 5)
+        Me.DateTxt.Name = "DateTxt"
+        Me.DateTxt.Size = New System.Drawing.Size(67, 25)
+        Me.DateTxt.TabIndex = 1
+        Me.DateTxt.Text = "Label3"
+        '
+        'DigitalClock
+        '
+        Me.DigitalClock.AutoSize = True
+        Me.DigitalClock.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DigitalClock.ForeColor = System.Drawing.Color.White
+        Me.DigitalClock.Location = New System.Drawing.Point(891, 5)
+        Me.DigitalClock.Name = "DigitalClock"
+        Me.DigitalClock.Size = New System.Drawing.Size(67, 25)
+        Me.DigitalClock.TabIndex = 0
+        Me.DigitalClock.Text = "Label3"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(2, 652)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(227, 50)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Logout"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1359, 784)
+        Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PanelContainer)
@@ -227,8 +289,10 @@ Partial Class Main
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -246,4 +310,9 @@ Partial Class Main
     Friend WithEvents PatientsBtn As System.Windows.Forms.Button
     Friend WithEvents DashboardBtn As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents ClockTimer As System.Windows.Forms.Timer
+    Friend WithEvents Panel4 As System.Windows.Forms.Panel
+    Friend WithEvents DigitalClock As System.Windows.Forms.Label
+    Friend WithEvents DateTxt As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
