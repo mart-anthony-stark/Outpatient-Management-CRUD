@@ -10,8 +10,8 @@
                 .CommandText = "SELECT (SELECT COUNT(*) from patient) AS Patients, (SELECT COUNT(*) from doctor) AS Doctors, (SELECT COUNT(*) from appointment) AS Appointments"
                 cmdread = .ExecuteReader
                 If (cmdread.Read()) Then
-                    DoctorsCount.Text = cmdread.GetString(0)
-                    PatientsCount.Text = cmdread.GetString(1)
+                    DoctorsCount.Text = cmdread.GetString(1)
+                    PatientsCount.Text = cmdread.GetString(0)
                     AppointmentsCount.Text = cmdread.GetString(2)
                 Else
                 End If
