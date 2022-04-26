@@ -74,7 +74,7 @@ Partial Class Patients
         Me.PatientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PatientDataGrid.Location = New System.Drawing.Point(19, 53)
         Me.PatientDataGrid.Name = "PatientDataGrid"
-        Me.PatientDataGrid.Size = New System.Drawing.Size(942, 237)
+        Me.PatientDataGrid.Size = New System.Drawing.Size(1053, 237)
         Me.PatientDataGrid.TabIndex = 0
         '
         'Panel2
@@ -100,7 +100,7 @@ Partial Class Patients
         '
         'AddBtn
         '
-        Me.AddBtn.BackColor = System.Drawing.Color.Green
+        Me.AddBtn.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
@@ -113,7 +113,7 @@ Partial Class Patients
         '
         'SearchBtn
         '
-        Me.SearchBtn.BackColor = System.Drawing.Color.Green
+        Me.SearchBtn.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBtn.ForeColor = System.Drawing.Color.White
@@ -178,7 +178,7 @@ Partial Class Patients
         'MaleRadio
         '
         Me.MaleRadio.AutoSize = True
-        Me.MaleRadio.Location = New System.Drawing.Point(16, 8)
+        Me.MaleRadio.Location = New System.Drawing.Point(16, 18)
         Me.MaleRadio.Name = "MaleRadio"
         Me.MaleRadio.Size = New System.Drawing.Size(48, 17)
         Me.MaleRadio.TabIndex = 10
@@ -200,7 +200,7 @@ Partial Class Patients
         'FemaleRadio
         '
         Me.FemaleRadio.AutoSize = True
-        Me.FemaleRadio.Location = New System.Drawing.Point(103, 8)
+        Me.FemaleRadio.Location = New System.Drawing.Point(103, 18)
         Me.FemaleRadio.Name = "FemaleRadio"
         Me.FemaleRadio.Size = New System.Drawing.Size(59, 17)
         Me.FemaleRadio.TabIndex = 11
@@ -273,7 +273,7 @@ Partial Class Patients
         '
         'CancelAddBtn
         '
-        Me.CancelAddBtn.BackColor = System.Drawing.Color.Brown
+        Me.CancelAddBtn.BackColor = System.Drawing.Color.IndianRed
         Me.CancelAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CancelAddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CancelAddBtn.ForeColor = System.Drawing.Color.White
@@ -361,7 +361,7 @@ Partial Class Patients
         'EditFemaleRadio
         '
         Me.EditFemaleRadio.AutoSize = True
-        Me.EditFemaleRadio.Location = New System.Drawing.Point(103, 8)
+        Me.EditFemaleRadio.Location = New System.Drawing.Point(103, 17)
         Me.EditFemaleRadio.Name = "EditFemaleRadio"
         Me.EditFemaleRadio.Size = New System.Drawing.Size(59, 17)
         Me.EditFemaleRadio.TabIndex = 11
@@ -372,7 +372,7 @@ Partial Class Patients
         'EditMaleRadio
         '
         Me.EditMaleRadio.AutoSize = True
-        Me.EditMaleRadio.Location = New System.Drawing.Point(16, 8)
+        Me.EditMaleRadio.Location = New System.Drawing.Point(16, 17)
         Me.EditMaleRadio.Name = "EditMaleRadio"
         Me.EditMaleRadio.Size = New System.Drawing.Size(48, 17)
         Me.EditMaleRadio.TabIndex = 10
@@ -406,7 +406,7 @@ Partial Class Patients
         '
         'EditSaveBtn
         '
-        Me.EditSaveBtn.BackColor = System.Drawing.Color.Green
+        Me.EditSaveBtn.BackColor = System.Drawing.Color.MediumSeaGreen
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
@@ -445,7 +445,7 @@ Partial Class Patients
         '
         'DeleteBtn
         '
-        Me.DeleteBtn.BackColor = System.Drawing.Color.Brown
+        Me.DeleteBtn.BackColor = System.Drawing.Color.IndianRed
         Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DeleteBtn.ForeColor = System.Drawing.Color.White
