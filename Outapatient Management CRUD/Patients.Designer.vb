@@ -69,6 +69,8 @@ Partial Class Patients
         '
         'PatientDataGrid
         '
+        Me.PatientDataGrid.AllowUserToAddRows = False
+        Me.PatientDataGrid.AllowUserToDeleteRows = False
         Me.PatientDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.PatientDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLight
         Me.PatientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
