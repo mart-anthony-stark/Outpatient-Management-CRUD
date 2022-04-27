@@ -2,7 +2,8 @@
     Private currentPatId As String
 
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-            FetchAllPatients()
+        FetchAllPatients()
+        AddControls(PatientDataGrid)
     End Sub
 
     'Handles add patient'
@@ -43,6 +44,11 @@
             MsgBox("Invalid ID. You must input only numeric characters")
             Return
         End If
+        SearchData(id)
+    End Sub
+
+    'Handle query for searching patient and populating edit field
+    Private Sub SearchData(ByVal id As String)
         Try
             strconn.Open()
             With cmd
@@ -69,6 +75,23 @@
             MsgBox(ex.Message)
         End Try
         strconn.Close()
+    End Sub
+
+    'Handle Delete query'
+    Private Sub deletePatient(ByVal id As String)
+        Dim ans As String
+        ans = MsgBox("Are you sure you wamt to delete this record?", vbYesNo)
+        If ans = vbYes Then
+            Try
+                readuery("DELETE FROM patient WHERE patient_id=" & id)
+                FetchAllPatients()
+                MsgBox("Patient record was successfully deleted")
+                ClearEdit()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+
     End Sub
 
     'Clears add fields'
@@ -134,19 +157,7 @@
     End Sub
 
     Private Sub DeleteBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeleteBtn.Click
-        Dim ans As String
-        ans = MsgBox("Confirm Update", vbYesNo)
-        If ans = vbYes Then
-            Try
-                readuery("DELETE FROM patient WHERE patient_id=" & currentPatId)
-                FetchAllPatients()
-                MsgBox("Patient record was successfully deleted")
-                ClearEdit()
-            Catch ex As Exception
-                MsgBox(ex.Message)
-            End Try
-        End If
-    
+        deletePatient(currentPatId)
     End Sub
 
     'Get all patient data in db'
@@ -156,5 +167,24 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    'Method that handles edit or delete click in datagrid
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs) Handles PatientDataGrid.CellContentClick
+        Dim senderGrid = DirectCast(sender, DataGridView)
+        Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+        Dim row As System.Windows.Forms.DataGridViewRow = PatientDataGrid.Rows(e.RowIndex)
+        Dim id As String = row.Cells(2).Value.ToString
+        If TypeOf column Is DataGridViewButtonColumn AndAlso
+            e.RowIndex >= 0 Then
+            'TODO - Button Clicked - Execute Code Here
+            If (column.HeaderText Is "Edit") Then
+                'Dim dr As DataGridViewRow = PatientDataGrid.SelectedRows(0)'
+                SearchData(id)
+            ElseIf (column.HeaderText Is "Delete") Then
+                deletePatient(id)
+            End If
+        End If
+
     End Sub
 End Class
