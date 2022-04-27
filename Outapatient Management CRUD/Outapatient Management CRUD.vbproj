@@ -95,6 +95,7 @@
     <Compile Include="Doctors.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GridModule.vb" />
     <Compile Include="Main.Designer.vb">
       <DependentUpon>Main.vb</DependentUpon>
     </Compile>
