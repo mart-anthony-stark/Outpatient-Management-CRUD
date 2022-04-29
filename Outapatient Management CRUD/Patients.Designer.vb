@@ -84,6 +84,8 @@ Partial Class Patients
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PatientDataGrid)
+        Me.Panel2.Controls.Add(Me.Panel3)
+        Me.Panel2.Controls.Add(Me.SearchBtn)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -119,7 +121,7 @@ Partial Class Patients
         Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBtn.ForeColor = System.Drawing.Color.White
-        Me.SearchBtn.Location = New System.Drawing.Point(881, 307)
+        Me.SearchBtn.Location = New System.Drawing.Point(935, 7)
         Me.SearchBtn.Name = "SearchBtn"
         Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
         Me.SearchBtn.TabIndex = 4
@@ -139,7 +141,7 @@ Partial Class Patients
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.SearchBox)
-        Me.Panel3.Location = New System.Drawing.Point(707, 308)
+        Me.Panel3.Location = New System.Drawing.Point(761, 8)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(168, 39)
         Me.Panel3.TabIndex = 6
@@ -498,8 +500,6 @@ Partial Class Patients
         Me.Controls.Add(Me.DOBPicker)
         Me.Controls.Add(Me.LastnameBox)
         Me.Controls.Add(Me.FirstnameBox)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.SearchBtn)
         Me.Controls.Add(Me.AddBtn)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
