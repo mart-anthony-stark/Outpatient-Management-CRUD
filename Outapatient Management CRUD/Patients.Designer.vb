@@ -25,11 +25,11 @@ Partial Class Patients
         Me.PatientDataGrid = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.AddBtn = New System.Windows.Forms.Button()
-        Me.SearchBtn = New System.Windows.Forms.Button()
-        Me.SearchBox = New System.Windows.Forms.TextBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.SearchBox = New System.Windows.Forms.TextBox()
+        Me.SearchBtn = New System.Windows.Forms.Button()
+        Me.AddBtn = New System.Windows.Forms.Button()
         Me.FirstnameBox = New System.Windows.Forms.TextBox()
         Me.LastnameBox = New System.Windows.Forms.TextBox()
         Me.DOBPicker = New System.Windows.Forms.DateTimePicker()
@@ -76,6 +76,7 @@ Partial Class Patients
         Me.PatientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PatientDataGrid.Location = New System.Drawing.Point(19, 53)
         Me.PatientDataGrid.Name = "PatientDataGrid"
+        Me.PatientDataGrid.ReadOnly = True
         Me.PatientDataGrid.Size = New System.Drawing.Size(1053, 237)
         Me.PatientDataGrid.TabIndex = 0
         '
@@ -102,40 +103,6 @@ Partial Class Patients
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Patients"
         '
-        'AddBtn
-        '
-        Me.AddBtn.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddBtn.ForeColor = System.Drawing.Color.White
-        Me.AddBtn.Location = New System.Drawing.Point(171, 608)
-        Me.AddBtn.Name = "AddBtn"
-        Me.AddBtn.Size = New System.Drawing.Size(84, 39)
-        Me.AddBtn.TabIndex = 3
-        Me.AddBtn.Text = "Add"
-        Me.AddBtn.UseVisualStyleBackColor = False
-        '
-        'SearchBtn
-        '
-        Me.SearchBtn.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchBtn.ForeColor = System.Drawing.Color.White
-        Me.SearchBtn.Location = New System.Drawing.Point(935, 7)
-        Me.SearchBtn.Name = "SearchBtn"
-        Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
-        Me.SearchBtn.TabIndex = 4
-        Me.SearchBtn.Text = "Search"
-        Me.SearchBtn.UseVisualStyleBackColor = False
-        '
-        'SearchBox
-        '
-        Me.SearchBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchBox.Location = New System.Drawing.Point(34, 1)
-        Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(131, 35)
-        Me.SearchBox.TabIndex = 5
-        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
@@ -154,6 +121,40 @@ Partial Class Patients
         Me.Label3.Size = New System.Drawing.Size(18, 13)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "ID"
+        '
+        'SearchBox
+        '
+        Me.SearchBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchBox.Location = New System.Drawing.Point(34, 1)
+        Me.SearchBox.Name = "SearchBox"
+        Me.SearchBox.Size = New System.Drawing.Size(131, 35)
+        Me.SearchBox.TabIndex = 5
+        '
+        'SearchBtn
+        '
+        Me.SearchBtn.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SearchBtn.ForeColor = System.Drawing.Color.White
+        Me.SearchBtn.Location = New System.Drawing.Point(935, 7)
+        Me.SearchBtn.Name = "SearchBtn"
+        Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
+        Me.SearchBtn.TabIndex = 4
+        Me.SearchBtn.Text = "Search"
+        Me.SearchBtn.UseVisualStyleBackColor = False
+        '
+        'AddBtn
+        '
+        Me.AddBtn.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AddBtn.ForeColor = System.Drawing.Color.White
+        Me.AddBtn.Location = New System.Drawing.Point(171, 608)
+        Me.AddBtn.Name = "AddBtn"
+        Me.AddBtn.Size = New System.Drawing.Size(84, 39)
+        Me.AddBtn.TabIndex = 3
+        Me.AddBtn.Text = "Add"
+        Me.AddBtn.UseVisualStyleBackColor = False
         '
         'FirstnameBox
         '
@@ -474,6 +475,7 @@ Partial Class Patients
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1109, 715)
         Me.Controls.Add(Me.DeleteBtn)
         Me.Controls.Add(Me.Label14)
