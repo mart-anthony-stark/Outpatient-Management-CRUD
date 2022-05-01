@@ -91,7 +91,6 @@
                 MsgBox(ex.Message)
             End Try
         End If
-
     End Sub
 
     'Clears add fields'
@@ -105,7 +104,7 @@
         ToggleBtns()
     End Sub
 
-    'Toggles edit buttons visbility (sav, delete, cancel) '
+    'Toggles edit buttons visbility (save, delete, cancel) '
     Private Sub ToggleBtns()
         Dim state As Boolean = Not String.IsNullOrEmpty(currentPatId)
         EditCancelBtn.Visible = state
@@ -179,7 +178,6 @@
             e.RowIndex >= 0 Then
             'TODO - Button Clicked - Execute Code Here
             If (column.HeaderText Is "Edit") Then
-                'Dim dr As DataGridViewRow = PatientDataGrid.SelectedRows(0)'
                 SearchData(id)
             ElseIf (column.HeaderText Is "Delete") Then
                 deletePatient(id)
