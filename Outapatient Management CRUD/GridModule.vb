@@ -15,7 +15,7 @@
         deleteBtn.Name = "Delete"
         deleteBtn.UseColumnTextForButtonValue = True
         deleteBtn.FlatStyle = FlatStyle.Flat
-        deleteBtn.DefaultCellStyle.BackColor = Color.Brown
+        deleteBtn.DefaultCellStyle.BackColor = Color.IndianRed
         deleteBtn.DefaultCellStyle.ForeColor = Color.White
         DTG.Columns.Insert(DTG.Columns.Count, deleteBtn)
     End Sub
