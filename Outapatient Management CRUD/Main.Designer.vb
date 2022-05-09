@@ -27,12 +27,10 @@ Partial Class Main
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MinimizeBtn = New System.Windows.Forms.Button()
-        Me.ExitBtn = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.AppointmentsBtn = New System.Windows.Forms.Button()
         Me.DoctorsBtn = New System.Windows.Forms.Button()
         Me.PatientsBtn = New System.Windows.Forms.Button()
@@ -41,12 +39,14 @@ Partial Class Main
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.DateTxt = New System.Windows.Forms.Label()
         Me.DigitalClock = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelContainer
@@ -59,10 +59,10 @@ Partial Class Main
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.MinimizeBtn)
-        Me.Panel1.Controls.Add(Me.ExitBtn)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -78,16 +78,6 @@ Partial Class Main
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(232, 51)
         Me.Panel3.TabIndex = 3
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -107,37 +97,9 @@ Partial Class Main
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(569, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(347, 25)
+        Me.Label1.Size = New System.Drawing.Size(329, 25)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Outpatient Management System"
-        '
-        'MinimizeBtn
-        '
-        Me.MinimizeBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.MinimizeBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.MinimizeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MinimizeBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.MinimizeBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.MinimizeBtn.Location = New System.Drawing.Point(1238, 8)
-        Me.MinimizeBtn.Name = "MinimizeBtn"
-        Me.MinimizeBtn.Size = New System.Drawing.Size(43, 30)
-        Me.MinimizeBtn.TabIndex = 1
-        Me.MinimizeBtn.Text = "--"
-        Me.MinimizeBtn.UseVisualStyleBackColor = False
-        '
-        'ExitBtn
-        '
-        Me.ExitBtn.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ExitBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(190, Byte), Integer))
-        Me.ExitBtn.Location = New System.Drawing.Point(1304, 8)
-        Me.ExitBtn.Name = "ExitBtn"
-        Me.ExitBtn.Size = New System.Drawing.Size(43, 30)
-        Me.ExitBtn.TabIndex = 0
-        Me.ExitBtn.Text = "X"
-        Me.ExitBtn.UseVisualStyleBackColor = False
+        Me.Label1.Text = "Outpatient Information System"
         '
         'Panel2
         '
@@ -152,6 +114,21 @@ Partial Class Main
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(232, 733)
         Me.Panel2.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.Button1.Location = New System.Drawing.Point(2, 652)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(227, 50)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Logout"
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'AppointmentsBtn
         '
@@ -257,20 +234,39 @@ Partial Class Main
         Me.DigitalClock.TabIndex = 0
         Me.DigitalClock.Text = "Label3"
         '
-        'Button1
+        'PictureBox1
         '
-        Me.Button1.BackColor = System.Drawing.Color.White
-        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.Button1.Location = New System.Drawing.Point(2, 652)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(227, 50)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Logout"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(1297, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 25)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "-"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(1323, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(24, 25)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "x"
         '
         'Main
         '
@@ -289,18 +285,16 @@ Partial Class Main
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents PanelContainer As System.Windows.Forms.Panel
     Friend WithEvents SaveFileDialog1 As System.Windows.Forms.SaveFileDialog
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents MinimizeBtn As System.Windows.Forms.Button
-    Friend WithEvents ExitBtn As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
@@ -315,4 +309,6 @@ Partial Class Main
     Friend WithEvents DigitalClock As System.Windows.Forms.Label
     Friend WithEvents DateTxt As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
