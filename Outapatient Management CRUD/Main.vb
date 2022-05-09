@@ -7,11 +7,11 @@
         LoadForm(Dashboard)
     End Sub
 
-    Private Sub ExitBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitBtn.Click
+    Private Sub ExitBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Application.Exit()
     End Sub
 
-    Private Sub MinimizeBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MinimizeBtn.Click
+    Private Sub MinimizeBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         WindowState = FormWindowState.Minimized
     End Sub
 
@@ -62,11 +62,20 @@
         DigitalClock.Text = TimeOfDay
     End Sub
 
-    Private Sub DigitalClock_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DigitalClock.Click
-
-    End Sub
-
+    'Logout'
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Me.Close()
+        Login.Show()
+    End Sub
+
+    'Exit'
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
+        Application.Exit()
+    End Sub
+
+    'Minimize'
+    Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
+        WindowState = FormWindowState.Minimized
+
     End Sub
 End Class
