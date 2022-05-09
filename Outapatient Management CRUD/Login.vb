@@ -19,9 +19,33 @@
         If (String.IsNullOrEmpty(email) Or String.IsNullOrEmpty(password)) Then
             MessageBox.Show("Please enter your email and password", "Empty fields", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
-            MsgBox("Logged in")
-            Me.Hide()
-            Main.Show()
+            Try
+                strconn.Open()
+                With cmd
+                    .Connection = strconn
+                    .CommandText = "SELECT * FROM admin WHERE email='" & email & "'"
+                    cmdread = .ExecuteReader
+                    If (cmdread.Read()) Then
+                        Dim pass As String = (cmdread.GetString(4))
+                        'Check equality of passwords
+                        If (Not pass.Equals(password)) Then
+                            MessageBox.Show("Incorrect password", "Incorrect Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                        Else
+                            strconn.Close()
+                            MsgBox("Logged in Successfully")
+                            EmailBox.Text = ""
+                            PasswordBox.Text = ""
+                            Me.Hide()
+                            Main.Show()
+                        End If
+                    Else
+                        MessageBox.Show("The email you entered is not found in the database", "Incorrect Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                End With
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+            strconn.Close()
         End If
     End Sub
 End Class
