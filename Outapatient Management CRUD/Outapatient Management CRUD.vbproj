@@ -96,6 +96,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GridModule.vb" />
+    <Compile Include="Laboratory.Designer.vb">
+      <DependentUpon>Laboratory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laboratory.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors.resx">
       <DependentUpon>Doctors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laboratory.resx">
+      <DependentUpon>Laboratory.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
