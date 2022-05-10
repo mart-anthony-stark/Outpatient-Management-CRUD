@@ -47,6 +47,8 @@
             DoctorsBtn.BackColor = Color.FromArgb(239, 243, 246)
         ElseIf (activePanel.Equals("Appointments")) Then
             AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
+        ElseIf (activePanel.Equals("Laboratory")) Then
+            AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
         End If
     End Sub
 
@@ -64,8 +66,12 @@
 
     'Logout'
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Me.Close()
-        Login.Show()
+        Dim ans As String
+        ans = MsgBox("Are you sure you wamt to log out?", vbYesNo)
+        If ans = vbYes Then
+            Me.Close()
+            Login.Show()
+        End If
     End Sub
 
     'Exit'
@@ -77,5 +83,10 @@
     Private Sub Label3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label3.Click
         WindowState = FormWindowState.Minimized
 
+    End Sub
+
+    'Laboratory'
+    Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LaboratoryBtn.Click
+        LoadForm(Laboratory)
     End Sub
 End Class
