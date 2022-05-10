@@ -26,10 +26,14 @@ Partial Class Main
         Me.PanelContainer = New System.Windows.Forms.Panel()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.LaboratoryBtn = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.AppointmentsBtn = New System.Windows.Forms.Button()
         Me.DoctorsBtn = New System.Windows.Forms.Button()
@@ -39,14 +43,11 @@ Partial Class Main
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.DateTxt = New System.Windows.Forms.Label()
         Me.DigitalClock = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PanelContainer
@@ -69,6 +70,30 @@ Partial Class Main
         Me.Panel1.Size = New System.Drawing.Size(1359, 51)
         Me.Panel1.TabIndex = 1
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(1297, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(20, 25)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "-"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(1323, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(24, 25)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "x"
+        '
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(63, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(181, Byte), Integer))
@@ -78,6 +103,16 @@ Partial Class Main
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(232, 51)
         Me.Panel3.TabIndex = 3
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.TabIndex = 4
+        Me.PictureBox1.TabStop = False
         '
         'Label2
         '
@@ -104,6 +139,7 @@ Partial Class Main
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.LaboratoryBtn)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.AppointmentsBtn)
         Me.Panel2.Controls.Add(Me.DoctorsBtn)
@@ -114,6 +150,22 @@ Partial Class Main
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(232, 733)
         Me.Panel2.TabIndex = 2
+        '
+        'LaboratoryBtn
+        '
+        Me.LaboratoryBtn.BackColor = System.Drawing.Color.White
+        Me.LaboratoryBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.LaboratoryBtn.FlatAppearance.BorderSize = 0
+        Me.LaboratoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LaboratoryBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LaboratoryBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.LaboratoryBtn.Location = New System.Drawing.Point(2, 318)
+        Me.LaboratoryBtn.Name = "LaboratoryBtn"
+        Me.LaboratoryBtn.Size = New System.Drawing.Size(227, 50)
+        Me.LaboratoryBtn.TabIndex = 5
+        Me.LaboratoryBtn.Text = "Laboratory"
+        Me.LaboratoryBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.LaboratoryBtn.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -234,40 +286,6 @@ Partial Class Main
         Me.DigitalClock.TabIndex = 0
         Me.DigitalClock.Text = "Label3"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources._196123
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(50, 5)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
-        Me.PictureBox1.TabIndex = 4
-        Me.PictureBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(1297, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(20, 25)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "-"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(1323, 16)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(24, 25)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "x"
-        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -285,10 +303,10 @@ Partial Class Main
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -311,4 +329,5 @@ Partial Class Main
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents LaboratoryBtn As System.Windows.Forms.Button
 End Class
