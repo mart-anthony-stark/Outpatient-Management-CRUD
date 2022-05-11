@@ -10,7 +10,7 @@ Public Class Appointments
         AddControls(AppointmentTbl)
     End Sub
 
-    Private Sub FetchAppointments()
+    Public Sub FetchAppointments()
         reload("SELECT apt_id AS ID, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date AS Date, time AS Time, apt_type AS Type FROM appointment, patient, doctor", AppointmentTbl)
     End Sub
 
@@ -94,7 +94,7 @@ Public Class Appointments
         End If
     End Sub
 
-    Private Sub DeleteAppointment(ByVal id As String)
+    Public Sub DeleteAppointment(ByVal id As String)
         Dim ans As String
         ans = MsgBox("Are you sure you wamt to delete this record?", vbYesNo)
         If ans = vbYes Then
@@ -109,6 +109,42 @@ Public Class Appointments
         End If
     End Sub
 
+    'Search / Edit Appointment
+    Private Sub SearchData(ByVal id As String)
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = "SELECT apt_id, concat(doctor.lastname,', ', doctor.firstname) As doctor_name, concat(patient.lastname,', ', patient.firstname) As patient_name, date, time, apt_type FROM doctor, patient, appointment WHERE apt_id='" & id & "'"
+                cmdread = .ExecuteReader
+                If (cmdread.Read()) Then
+                    EditAppointment.AptId.Text = cmdread.GetString(0)
+                    EditAppointment.DoctorName.Text = cmdread.GetString(1)
+                    EditAppointment.PatientName.Text = cmdread.GetString(2)
+                    EditAppointment.DateTimePicker.Value = cmdread.GetString(3)
+                    Dim time As Array = cmdread.GetString(4).Split(":")
+                    EditAppointment.AptType.Text = cmdread.GetString(5)
+
+                    Dim suffix As String = "AM"
+                    Dim hrs = time(0)
+                    If (hrs >= 12) Then
+                        suffix = "PM"
+                    End If
+                    hrs = ((hrs + 11) Mod 12 + 1)
+
+                    EditAppointment.Hours.Value = hrs
+                    EditAppointment.Minutes.Value = time(1)
+                    EditAppointment.Show()
+                Else
+                    MsgBox("Appointment Record is not found in database using the id you specified")
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        strconn.Close()
+    End Sub
+
     'Handle Inline edit and delete button
     Private Sub AppointmentTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles AppointmentTbl.CellContentClick
         Dim senderGrid = DirectCast(sender, DataGridView)
@@ -120,7 +156,7 @@ Public Class Appointments
             e.RowIndex >= 0 Then
             'TODO - Button Clicked - Execute Code Here
             If (column.HeaderText Is "Edit") Then
-                'SearchData(id)
+                SearchData(id)
             ElseIf (column.HeaderText Is "Delete") Then
                 DeleteAppointment(id)
             End If
