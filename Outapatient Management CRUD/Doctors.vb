@@ -30,6 +30,7 @@
             FetchData()
             MsgBox("Doctor successfully added to record")
             ClearAddFields()
+            Appointments.FetchCmbData()
         End If
     End Sub
 
@@ -123,6 +124,7 @@
             FetchData()
             ClearEditFields()
             MsgBox("Record was updated successfully")
+            Appointments.FetchCmbData()
         End If
     End Sub
 
@@ -136,6 +138,7 @@
                 FetchData()
                 ClearEditFields()
                 MsgBox("Doctor record was successfully deleted")
+                Appointments.FetchCmbData()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
