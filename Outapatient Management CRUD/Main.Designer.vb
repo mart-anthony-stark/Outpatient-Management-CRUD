@@ -159,7 +159,7 @@ Partial Class Main
         Me.LaboratoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.LaboratoryBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LaboratoryBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
-        Me.LaboratoryBtn.Location = New System.Drawing.Point(2, 318)
+        Me.LaboratoryBtn.Location = New System.Drawing.Point(2, 314)
         Me.LaboratoryBtn.Name = "LaboratoryBtn"
         Me.LaboratoryBtn.Size = New System.Drawing.Size(227, 50)
         Me.LaboratoryBtn.TabIndex = 5
@@ -226,7 +226,7 @@ Partial Class Main
         Me.PatientsBtn.Name = "PatientsBtn"
         Me.PatientsBtn.Size = New System.Drawing.Size(227, 50)
         Me.PatientsBtn.TabIndex = 1
-        Me.PatientsBtn.Text = "Patients"
+        Me.PatientsBtn.Text = "Outpatients"
         Me.PatientsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.PatientsBtn.UseVisualStyleBackColor = False
         '
