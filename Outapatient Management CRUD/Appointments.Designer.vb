@@ -71,7 +71,7 @@ Partial Class Appointments
         '
         Me.DoctorsCmbBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DoctorsCmbBox.FormattingEnabled = True
-        Me.DoctorsCmbBox.Location = New System.Drawing.Point(25, 395)
+        Me.DoctorsCmbBox.Location = New System.Drawing.Point(309, 406)
         Me.DoctorsCmbBox.Name = "DoctorsCmbBox"
         Me.DoctorsCmbBox.Size = New System.Drawing.Size(260, 33)
         Me.DoctorsCmbBox.TabIndex = 13
@@ -79,7 +79,7 @@ Partial Class Appointments
         'DatePicker
         '
         Me.DatePicker.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DatePicker.Location = New System.Drawing.Point(25, 483)
+        Me.DatePicker.Location = New System.Drawing.Point(309, 494)
         Me.DatePicker.Name = "DatePicker"
         Me.DatePicker.Size = New System.Drawing.Size(260, 24)
         Me.DatePicker.TabIndex = 15
@@ -89,7 +89,7 @@ Partial Class Appointments
         '
         Me.PatientCmbBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.PatientCmbBox.FormattingEnabled = True
-        Me.PatientCmbBox.Location = New System.Drawing.Point(314, 395)
+        Me.PatientCmbBox.Location = New System.Drawing.Point(598, 406)
         Me.PatientCmbBox.Name = "PatientCmbBox"
         Me.PatientCmbBox.Size = New System.Drawing.Size(256, 33)
         Me.PatientCmbBox.TabIndex = 16
@@ -99,7 +99,7 @@ Partial Class Appointments
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(20, 367)
+        Me.Label1.Location = New System.Drawing.Point(304, 378)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 25)
         Me.Label1.TabIndex = 17
@@ -110,7 +110,7 @@ Partial Class Appointments
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label2.Location = New System.Drawing.Point(309, 367)
+        Me.Label2.Location = New System.Drawing.Point(593, 378)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 25)
         Me.Label2.TabIndex = 18
@@ -121,7 +121,7 @@ Partial Class Appointments
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(20, 452)
+        Me.Label3.Location = New System.Drawing.Point(304, 463)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 25)
         Me.Label3.TabIndex = 19
@@ -131,7 +131,7 @@ Partial Class Appointments
         '
         Me.Hours.AutoSize = True
         Me.Hours.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Hours.Location = New System.Drawing.Point(316, 479)
+        Me.Hours.Location = New System.Drawing.Point(600, 490)
         Me.Hours.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
         Me.Hours.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Hours.Name = "Hours"
@@ -143,7 +143,7 @@ Partial Class Appointments
         '
         Me.Minutes.AutoSize = True
         Me.Minutes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Minutes.Location = New System.Drawing.Point(363, 479)
+        Me.Minutes.Location = New System.Drawing.Point(647, 490)
         Me.Minutes.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.Minutes.Name = "Minutes"
         Me.Minutes.Size = New System.Drawing.Size(46, 29)
@@ -155,7 +155,7 @@ Partial Class Appointments
         Me.ampm.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ampm.FormattingEnabled = True
         Me.ampm.Items.AddRange(New Object() {"AM", "PM"})
-        Me.ampm.Location = New System.Drawing.Point(410, 478)
+        Me.ampm.Location = New System.Drawing.Point(694, 489)
         Me.ampm.Name = "ampm"
         Me.ampm.Size = New System.Drawing.Size(59, 32)
         Me.ampm.TabIndex = 22
@@ -165,7 +165,7 @@ Partial Class Appointments
         Me.CurrentTimeBtn.BackColor = System.Drawing.Color.CadetBlue
         Me.CurrentTimeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CurrentTimeBtn.ForeColor = System.Drawing.Color.White
-        Me.CurrentTimeBtn.Location = New System.Drawing.Point(475, 478)
+        Me.CurrentTimeBtn.Location = New System.Drawing.Point(759, 489)
         Me.CurrentTimeBtn.Name = "CurrentTimeBtn"
         Me.CurrentTimeBtn.Size = New System.Drawing.Size(92, 30)
         Me.CurrentTimeBtn.TabIndex = 23
@@ -177,7 +177,7 @@ Partial Class Appointments
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(311, 451)
+        Me.Label4.Location = New System.Drawing.Point(595, 462)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 25)
         Me.Label4.TabIndex = 24
@@ -186,7 +186,7 @@ Partial Class Appointments
         'AddAptTypeInput
         '
         Me.AddAptTypeInput.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddAptTypeInput.Location = New System.Drawing.Point(25, 556)
+        Me.AddAptTypeInput.Location = New System.Drawing.Point(309, 567)
         Me.AddAptTypeInput.Name = "AddAptTypeInput"
         Me.AddAptTypeInput.Size = New System.Drawing.Size(260, 31)
         Me.AddAptTypeInput.TabIndex = 25
@@ -196,7 +196,7 @@ Partial Class Appointments
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label6.Location = New System.Drawing.Point(20, 528)
+        Me.Label6.Location = New System.Drawing.Point(304, 539)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(186, 25)
         Me.Label6.TabIndex = 26
@@ -208,7 +208,7 @@ Partial Class Appointments
         Me.ClearAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ClearAddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClearAddBtn.ForeColor = System.Drawing.Color.White
-        Me.ClearAddBtn.Location = New System.Drawing.Point(475, 610)
+        Me.ClearAddBtn.Location = New System.Drawing.Point(767, 605)
         Me.ClearAddBtn.Name = "ClearAddBtn"
         Me.ClearAddBtn.Size = New System.Drawing.Size(84, 39)
         Me.ClearAddBtn.TabIndex = 28
@@ -221,7 +221,7 @@ Partial Class Appointments
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
-        Me.AddBtn.Location = New System.Drawing.Point(350, 610)
+        Me.AddBtn.Location = New System.Drawing.Point(642, 605)
         Me.AddBtn.Name = "AddBtn"
         Me.AddBtn.Size = New System.Drawing.Size(84, 39)
         Me.AddBtn.TabIndex = 27
