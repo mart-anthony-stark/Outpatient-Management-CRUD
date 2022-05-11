@@ -95,6 +95,12 @@
     <Compile Include="Doctors.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditAppointment.Designer.vb">
+      <DependentUpon>EditAppointment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditAppointment.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GridModule.vb" />
     <Compile Include="Laboratory.Designer.vb">
       <DependentUpon>Laboratory.vb</DependentUpon>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors.resx">
       <DependentUpon>Doctors.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAppointment.resx">
+      <DependentUpon>EditAppointment.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratory.resx">
       <DependentUpon>Laboratory.vb</DependentUpon>
