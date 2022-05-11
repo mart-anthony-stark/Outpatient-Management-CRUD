@@ -25,7 +25,7 @@ Partial Class Appointments
         Me.Label5 = New System.Windows.Forms.Label()
         Me.AppointmentTbl = New System.Windows.Forms.DataGridView()
         Me.DoctorsCmbBox = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.DatePicker = New System.Windows.Forms.DateTimePicker()
         Me.PatientCmbBox = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -76,14 +76,14 @@ Partial Class Appointments
         Me.DoctorsCmbBox.Size = New System.Drawing.Size(260, 33)
         Me.DoctorsCmbBox.TabIndex = 13
         '
-        'DateTimePicker1
+        'DatePicker
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Location = New System.Drawing.Point(25, 483)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(260, 24)
-        Me.DateTimePicker1.TabIndex = 15
-        Me.DateTimePicker1.Value = New Date(2022, 5, 11, 20, 8, 44, 0)
+        Me.DatePicker.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DatePicker.Location = New System.Drawing.Point(25, 483)
+        Me.DatePicker.Name = "DatePicker"
+        Me.DatePicker.Size = New System.Drawing.Size(260, 24)
+        Me.DatePicker.TabIndex = 15
+        Me.DatePicker.Value = New Date(2022, 5, 11, 20, 8, 44, 0)
         '
         'PatientCmbBox
         '
@@ -145,7 +145,6 @@ Partial Class Appointments
         Me.Minutes.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Minutes.Location = New System.Drawing.Point(363, 479)
         Me.Minutes.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.Minutes.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.Minutes.Name = "Minutes"
         Me.Minutes.Size = New System.Drawing.Size(46, 29)
         Me.Minutes.TabIndex = 21
@@ -248,7 +247,7 @@ Partial Class Appointments
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.PatientCmbBox)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.DatePicker)
         Me.Controls.Add(Me.DoctorsCmbBox)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.AppointmentTbl)
@@ -265,7 +264,7 @@ Partial Class Appointments
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents AppointmentTbl As System.Windows.Forms.DataGridView
     Friend WithEvents DoctorsCmbBox As System.Windows.Forms.ComboBox
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DatePicker As System.Windows.Forms.DateTimePicker
     Friend WithEvents PatientCmbBox As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
