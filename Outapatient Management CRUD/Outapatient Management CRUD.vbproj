@@ -114,6 +114,12 @@
     <Compile Include="Laboratory.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LabtestResult.Designer.vb">
+      <DependentUpon>LabtestResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LabtestResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratory.resx">
       <DependentUpon>Laboratory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabtestResult.resx">
+      <DependentUpon>LabtestResult.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
