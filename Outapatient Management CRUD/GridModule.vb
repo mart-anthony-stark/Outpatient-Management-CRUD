@@ -21,7 +21,7 @@
     End Sub
 
     Public Sub AddEdit(ByVal DTG)
-        Dim editBtn, deleteBtn As New DataGridViewButtonColumn
+        Dim editBtn As New DataGridViewButtonColumn
         editBtn.HeaderText = "Edit"
         editBtn.Text = "Edit"
         editBtn.Name = "edit"
@@ -30,5 +30,17 @@
         editBtn.DefaultCellStyle.BackColor = Color.MediumSeaGreen
         editBtn.DefaultCellStyle.ForeColor = Color.White
         DTG.Columns.Insert(DTG.Columns.Count, editBtn)
+    End Sub
+
+    Public Sub AddLabtestBtn(ByVal DTG)
+        Dim labtestBtn As New DataGridViewButtonColumn
+        labtestBtn.HeaderText = "Laboratory"
+        labtestBtn.Text = "Laboratory Results"
+        labtestBtn.Name = "laboratory"
+        labtestBtn.UseColumnTextForButtonValue = True
+        labtestBtn.FlatStyle = FlatStyle.Flat
+        labtestBtn.DefaultCellStyle.BackColor = Color.CadetBlue
+        labtestBtn.DefaultCellStyle.ForeColor = Color.White
+        DTG.Columns.Insert(DTG.Columns.Count, labtestBtn)
     End Sub
 End Module
