@@ -65,7 +65,7 @@ Partial Class Doctors
         'AddFname
         '
         Me.AddFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddFname.Location = New System.Drawing.Point(154, 395)
+        Me.AddFname.Location = New System.Drawing.Point(167, 395)
         Me.AddFname.Name = "AddFname"
         Me.AddFname.Size = New System.Drawing.Size(212, 31)
         Me.AddFname.TabIndex = 1
@@ -75,7 +75,7 @@ Partial Class Doctors
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(43, 398)
+        Me.Label1.Location = New System.Drawing.Point(56, 398)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(107, 25)
         Me.Label1.TabIndex = 2
@@ -86,7 +86,7 @@ Partial Class Doctors
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label2.Location = New System.Drawing.Point(41, 445)
+        Me.Label2.Location = New System.Drawing.Point(54, 445)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(106, 25)
         Me.Label2.TabIndex = 4
@@ -95,7 +95,7 @@ Partial Class Doctors
         'AddLname
         '
         Me.AddLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddLname.Location = New System.Drawing.Point(154, 442)
+        Me.AddLname.Location = New System.Drawing.Point(167, 442)
         Me.AddLname.Name = "AddLname"
         Me.AddLname.Size = New System.Drawing.Size(212, 31)
         Me.AddLname.TabIndex = 3
@@ -105,7 +105,7 @@ Partial Class Doctors
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(2, 493)
+        Me.Label3.Location = New System.Drawing.Point(15, 493)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(146, 25)
         Me.Label3.TabIndex = 6
@@ -114,7 +114,7 @@ Partial Class Doctors
         'AddSpec
         '
         Me.AddSpec.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddSpec.Location = New System.Drawing.Point(154, 493)
+        Me.AddSpec.Location = New System.Drawing.Point(167, 493)
         Me.AddSpec.Name = "AddSpec"
         Me.AddSpec.Size = New System.Drawing.Size(212, 31)
         Me.AddSpec.TabIndex = 5
@@ -124,7 +124,7 @@ Partial Class Doctors
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(61, 551)
+        Me.Label4.Location = New System.Drawing.Point(74, 551)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 25)
         Me.Label4.TabIndex = 8
@@ -133,7 +133,7 @@ Partial Class Doctors
         'AddContact
         '
         Me.AddContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddContact.Location = New System.Drawing.Point(154, 548)
+        Me.AddContact.Location = New System.Drawing.Point(167, 548)
         Me.AddContact.Name = "AddContact"
         Me.AddContact.Size = New System.Drawing.Size(212, 31)
         Me.AddContact.TabIndex = 7
@@ -145,7 +145,7 @@ Partial Class Doctors
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(154, 610)
+        Me.Button1.Location = New System.Drawing.Point(167, 610)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 35)
         Me.Button1.TabIndex = 9
@@ -169,7 +169,7 @@ Partial Class Doctors
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(271, 610)
+        Me.Button2.Location = New System.Drawing.Point(284, 610)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(95, 35)
         Me.Button2.TabIndex = 11
@@ -183,7 +183,7 @@ Partial Class Doctors
         Me.EditDeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditDeleteBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditDeleteBtn.ForeColor = System.Drawing.Color.White
-        Me.EditDeleteBtn.Location = New System.Drawing.Point(838, 607)
+        Me.EditDeleteBtn.Location = New System.Drawing.Point(904, 604)
         Me.EditDeleteBtn.Name = "EditDeleteBtn"
         Me.EditDeleteBtn.Size = New System.Drawing.Size(95, 35)
         Me.EditDeleteBtn.TabIndex = 41
@@ -197,7 +197,7 @@ Partial Class Doctors
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
-        Me.EditSaveBtn.Location = New System.Drawing.Point(721, 607)
+        Me.EditSaveBtn.Location = New System.Drawing.Point(787, 604)
         Me.EditSaveBtn.Name = "EditSaveBtn"
         Me.EditSaveBtn.Size = New System.Drawing.Size(95, 35)
         Me.EditSaveBtn.TabIndex = 40
@@ -209,7 +209,7 @@ Partial Class Doctors
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label6.Location = New System.Drawing.Point(628, 548)
+        Me.Label6.Location = New System.Drawing.Point(694, 545)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(86, 25)
         Me.Label6.TabIndex = 39
@@ -218,7 +218,7 @@ Partial Class Doctors
         'EditContact
         '
         Me.EditContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditContact.Location = New System.Drawing.Point(721, 545)
+        Me.EditContact.Location = New System.Drawing.Point(787, 542)
         Me.EditContact.Name = "EditContact"
         Me.EditContact.Size = New System.Drawing.Size(212, 31)
         Me.EditContact.TabIndex = 38
@@ -228,7 +228,7 @@ Partial Class Doctors
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label7.Location = New System.Drawing.Point(569, 490)
+        Me.Label7.Location = New System.Drawing.Point(635, 487)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(146, 25)
         Me.Label7.TabIndex = 37
@@ -237,7 +237,7 @@ Partial Class Doctors
         'EditSpecialization
         '
         Me.EditSpecialization.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditSpecialization.Location = New System.Drawing.Point(721, 490)
+        Me.EditSpecialization.Location = New System.Drawing.Point(787, 487)
         Me.EditSpecialization.Name = "EditSpecialization"
         Me.EditSpecialization.Size = New System.Drawing.Size(212, 31)
         Me.EditSpecialization.TabIndex = 36
@@ -247,7 +247,7 @@ Partial Class Doctors
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label8.Location = New System.Drawing.Point(608, 442)
+        Me.Label8.Location = New System.Drawing.Point(674, 439)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(106, 25)
         Me.Label8.TabIndex = 35
@@ -256,7 +256,7 @@ Partial Class Doctors
         'EditLname
         '
         Me.EditLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditLname.Location = New System.Drawing.Point(721, 439)
+        Me.EditLname.Location = New System.Drawing.Point(787, 436)
         Me.EditLname.Name = "EditLname"
         Me.EditLname.Size = New System.Drawing.Size(212, 31)
         Me.EditLname.TabIndex = 34
@@ -266,7 +266,7 @@ Partial Class Doctors
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(610, 395)
+        Me.Label9.Location = New System.Drawing.Point(676, 392)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(107, 25)
         Me.Label9.TabIndex = 33
@@ -275,7 +275,7 @@ Partial Class Doctors
         'EditFname
         '
         Me.EditFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditFname.Location = New System.Drawing.Point(721, 392)
+        Me.EditFname.Location = New System.Drawing.Point(787, 389)
         Me.EditFname.Name = "EditFname"
         Me.EditFname.Size = New System.Drawing.Size(212, 31)
         Me.EditFname.TabIndex = 32
@@ -285,7 +285,7 @@ Partial Class Doctors
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label14.Location = New System.Drawing.Point(628, 352)
+        Me.Label14.Location = New System.Drawing.Point(853, 341)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 25)
         Me.Label14.TabIndex = 42
@@ -298,7 +298,7 @@ Partial Class Doctors
         Me.EditCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditCancelBtn.ForeColor = System.Drawing.Color.White
-        Me.EditCancelBtn.Location = New System.Drawing.Point(952, 607)
+        Me.EditCancelBtn.Location = New System.Drawing.Point(1018, 604)
         Me.EditCancelBtn.Name = "EditCancelBtn"
         Me.EditCancelBtn.Size = New System.Drawing.Size(95, 35)
         Me.EditCancelBtn.TabIndex = 43
