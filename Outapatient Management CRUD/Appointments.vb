@@ -8,6 +8,7 @@ Public Class Appointments
         GetCurrentTime()
         FetchAppointments()
         AddControls(AppointmentTbl)
+        AddLabtestBtn(AppointmentTbl)
     End Sub
 
     Public Sub FetchAppointments()
@@ -150,7 +151,7 @@ Public Class Appointments
         Dim senderGrid = DirectCast(sender, DataGridView)
         Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
         Dim row As System.Windows.Forms.DataGridViewRow = AppointmentTbl.Rows(e.RowIndex)
-        Dim id As String = row.Cells(2).Value.ToString
+        Dim id As String = row.Cells(3).Value.ToString
         'MsgBox(id & " - " & column.HeaderText)
         If TypeOf column Is DataGridViewButtonColumn AndAlso
             e.RowIndex >= 0 Then
@@ -159,6 +160,11 @@ Public Class Appointments
                 SearchData(id)
             ElseIf (column.HeaderText Is "Delete") Then
                 DeleteAppointment(id)
+            ElseIf (column.HeaderText Is "Laboratory") Then
+                LabtestResult.AptID.Text = id
+                LabtestResult.PatientName.Text = row.Cells(4).Value.ToString
+                LabtestResult.DoctorName.Text = row.Cells(5).Value.ToString
+                Main.LoadForm(LabtestResult)
             End If
         End If
     End Sub
