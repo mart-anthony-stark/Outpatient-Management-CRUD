@@ -132,9 +132,9 @@ Partial Class Main
         Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(569, 16)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(329, 25)
+        Me.Label1.Size = New System.Drawing.Size(347, 25)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Outpatient Information System"
+        Me.Label1.Text = "Outpatient Management System"
         '
         'Panel2
         '
