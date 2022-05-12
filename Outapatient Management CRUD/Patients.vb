@@ -30,6 +30,7 @@
                 MaleRadio.Checked = False
                 FemaleRadio.Checked = False
                 ContactBox.Text = ""
+                Appointments.FetchCmbData()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -80,13 +81,16 @@
     'Handle Delete query'
     Private Sub deletePatient(ByVal id As String)
         Dim ans As String
-        ans = MsgBox("Are you sure you wamt to delete this record?", vbYesNo)
+        ans = MsgBox("Records in other table that needs this details will also be deleted. Are you sure you wamt to delete this record?", vbYesNo)
         If ans = vbYes Then
             Try
+                readuery("DELETE FROM appointment WHERE patient=" & id)
                 readuery("DELETE FROM patient WHERE patient_id=" & id)
                 FetchAllPatients()
                 MsgBox("Patient record was successfully deleted")
                 ClearEdit()
+                Appointments.FetchCmbData()
+                Appointments.FetchAppointments()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
@@ -149,6 +153,7 @@
                 MsgBox("Patient record was successfully updated")
                 FetchAllPatients()
                 ClearEdit()
+                Appointments.FetchCmbData()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
