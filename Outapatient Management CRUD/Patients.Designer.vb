@@ -65,6 +65,7 @@ Partial Class Patients
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'PatientDataGrid
@@ -294,7 +295,7 @@ Partial Class Patients
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label9.Location = New System.Drawing.Point(549, 563)
+        Me.Label9.Location = New System.Drawing.Point(684, 560)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 25)
         Me.Label9.TabIndex = 28
@@ -305,7 +306,7 @@ Partial Class Patients
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label10.Location = New System.Drawing.Point(549, 512)
+        Me.Label10.Location = New System.Drawing.Point(684, 509)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 25)
         Me.Label10.TabIndex = 27
@@ -316,7 +317,7 @@ Partial Class Patients
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label11.Location = New System.Drawing.Point(550, 461)
+        Me.Label11.Location = New System.Drawing.Point(685, 458)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(98, 25)
         Me.Label11.TabIndex = 26
@@ -327,7 +328,7 @@ Partial Class Patients
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label12.Location = New System.Drawing.Point(549, 418)
+        Me.Label12.Location = New System.Drawing.Point(684, 415)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(106, 25)
         Me.Label12.TabIndex = 25
@@ -338,7 +339,7 @@ Partial Class Patients
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label13.Location = New System.Drawing.Point(549, 366)
+        Me.Label13.Location = New System.Drawing.Point(684, 363)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(107, 25)
         Me.Label13.TabIndex = 24
@@ -347,7 +348,7 @@ Partial Class Patients
         'EditContact
         '
         Me.EditContact.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditContact.Location = New System.Drawing.Point(658, 563)
+        Me.EditContact.Location = New System.Drawing.Point(793, 560)
         Me.EditContact.Name = "EditContact"
         Me.EditContact.Size = New System.Drawing.Size(217, 31)
         Me.EditContact.TabIndex = 23
@@ -356,7 +357,7 @@ Partial Class Patients
         '
         Me.GroupBox2.Controls.Add(Me.EditFemaleRadio)
         Me.GroupBox2.Controls.Add(Me.EditMaleRadio)
-        Me.GroupBox2.Location = New System.Drawing.Point(658, 501)
+        Me.GroupBox2.Location = New System.Drawing.Point(793, 498)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(188, 46)
         Me.GroupBox2.TabIndex = 22
@@ -388,7 +389,7 @@ Partial Class Patients
         'EditDOB
         '
         Me.EditDOB.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.EditDOB.Location = New System.Drawing.Point(658, 466)
+        Me.EditDOB.Location = New System.Drawing.Point(793, 463)
         Me.EditDOB.Name = "EditDOB"
         Me.EditDOB.Size = New System.Drawing.Size(217, 20)
         Me.EditDOB.TabIndex = 21
@@ -396,7 +397,7 @@ Partial Class Patients
         'EditLname
         '
         Me.EditLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditLname.Location = New System.Drawing.Point(658, 415)
+        Me.EditLname.Location = New System.Drawing.Point(793, 412)
         Me.EditLname.Name = "EditLname"
         Me.EditLname.Size = New System.Drawing.Size(217, 31)
         Me.EditLname.TabIndex = 20
@@ -404,7 +405,7 @@ Partial Class Patients
         'EditFname
         '
         Me.EditFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.EditFname.Location = New System.Drawing.Point(658, 366)
+        Me.EditFname.Location = New System.Drawing.Point(793, 363)
         Me.EditFname.Name = "EditFname"
         Me.EditFname.Size = New System.Drawing.Size(217, 31)
         Me.EditFname.TabIndex = 19
@@ -415,7 +416,7 @@ Partial Class Patients
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
-        Me.EditSaveBtn.Location = New System.Drawing.Point(658, 614)
+        Me.EditSaveBtn.Location = New System.Drawing.Point(793, 611)
         Me.EditSaveBtn.Name = "EditSaveBtn"
         Me.EditSaveBtn.Size = New System.Drawing.Size(77, 39)
         Me.EditSaveBtn.TabIndex = 29
@@ -429,7 +430,7 @@ Partial Class Patients
         Me.EditCancelBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditCancelBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditCancelBtn.ForeColor = System.Drawing.Color.White
-        Me.EditCancelBtn.Location = New System.Drawing.Point(863, 614)
+        Me.EditCancelBtn.Location = New System.Drawing.Point(998, 611)
         Me.EditCancelBtn.Name = "EditCancelBtn"
         Me.EditCancelBtn.Size = New System.Drawing.Size(80, 39)
         Me.EditCancelBtn.TabIndex = 30
@@ -442,7 +443,7 @@ Partial Class Patients
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label14.Location = New System.Drawing.Point(550, 314)
+        Me.Label14.Location = New System.Drawing.Point(863, 311)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 25)
         Me.Label14.TabIndex = 31
@@ -454,7 +455,7 @@ Partial Class Patients
         Me.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.DeleteBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DeleteBtn.ForeColor = System.Drawing.Color.White
-        Me.DeleteBtn.Location = New System.Drawing.Point(761, 614)
+        Me.DeleteBtn.Location = New System.Drawing.Point(896, 611)
         Me.DeleteBtn.Name = "DeleteBtn"
         Me.DeleteBtn.Size = New System.Drawing.Size(80, 39)
         Me.DeleteBtn.TabIndex = 32
@@ -465,6 +466,20 @@ Partial Class Patients
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.DeleteBtn)
+        Me.Panel1.Controls.Add(Me.Label14)
+        Me.Panel1.Controls.Add(Me.EditFname)
+        Me.Panel1.Controls.Add(Me.EditCancelBtn)
+        Me.Panel1.Controls.Add(Me.EditLname)
+        Me.Panel1.Controls.Add(Me.EditSaveBtn)
+        Me.Panel1.Controls.Add(Me.EditDOB)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.GroupBox2)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.EditContact)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label13)
+        Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -477,20 +492,6 @@ Partial Class Patients
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1109, 715)
-        Me.Controls.Add(Me.DeleteBtn)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.EditCancelBtn)
-        Me.Controls.Add(Me.EditSaveBtn)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.EditContact)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.EditDOB)
-        Me.Controls.Add(Me.EditLname)
-        Me.Controls.Add(Me.EditFname)
         Me.Controls.Add(Me.CancelAddBtn)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -516,6 +517,8 @@ Partial Class Patients
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
