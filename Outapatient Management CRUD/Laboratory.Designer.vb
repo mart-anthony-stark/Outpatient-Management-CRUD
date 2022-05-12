@@ -28,24 +28,24 @@ Partial Class Laboratory
         Me.DiseaseTbl = New System.Windows.Forms.DataGridView()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TestName = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Description = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Cost = New System.Windows.Forms.NumericUpDown()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.TestType = New System.Windows.Forms.ComboBox()
         Me.ClearAddBtn = New System.Windows.Forms.Button()
         Me.AddBtn = New System.Windows.Forms.Button()
-        Me.TestType = New System.Windows.Forms.ComboBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Cost = New System.Windows.Forms.NumericUpDown()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Description = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TestName = New System.Windows.Forms.TextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         CType(Me.LabtestTbl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiseaseTbl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
         CType(Me.Cost, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage2.SuspendLayout()
         Me.SuspendLayout()
         '
         'LabtestTbl
@@ -128,98 +128,15 @@ Partial Class Laboratory
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Laboratory Test Services"
         '
-        'TabPage2
+        'TestType
         '
-        Me.TabPage2.Controls.Add(Me.DiseaseTbl)
-        Me.TabPage2.Controls.Add(Me.Label1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1097, 651)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Disease / Illness Records"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'TestName
-        '
-        Me.TestName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TestName.Location = New System.Drawing.Point(318, 368)
-        Me.TestName.Name = "TestName"
-        Me.TestName.Size = New System.Drawing.Size(243, 29)
-        Me.TestName.TabIndex = 12
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label2.Location = New System.Drawing.Point(313, 340)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(113, 25)
-        Me.Label2.TabIndex = 18
-        Me.Label2.Text = "Test name"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(313, 426)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 25)
-        Me.Label3.TabIndex = 20
-        Me.Label3.Text = "Test type"
-        '
-        'Description
-        '
-        Me.Description.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Description.Location = New System.Drawing.Point(612, 368)
-        Me.Description.Multiline = True
-        Me.Description.Name = "Description"
-        Me.Description.Size = New System.Drawing.Size(262, 205)
-        Me.Description.TabIndex = 21
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(607, 340)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(120, 25)
-        Me.Label4.TabIndex = 22
-        Me.Label4.Text = "Description"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label5.Location = New System.Drawing.Point(313, 516)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(56, 25)
-        Me.Label5.TabIndex = 24
-        Me.Label5.Text = "Cost"
-        '
-        'Cost
-        '
-        Me.Cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cost.Location = New System.Drawing.Point(345, 544)
-        Me.Cost.Maximum = New Decimal(New Integer() {999999, 0, 0, 0})
-        Me.Cost.Name = "Cost"
-        Me.Cost.Size = New System.Drawing.Size(216, 29)
-        Me.Cost.TabIndex = 25
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(313, 545)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(26, 25)
-        Me.Label6.TabIndex = 26
-        Me.Label6.Text = "₱"
+        Me.TestType.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TestType.FormattingEnabled = True
+        Me.TestType.Items.AddRange(New Object() {"Clinical Chemistry", "Clinical Microbiology", "Hematology", "Blood banking and Serology (aka Immunohematology, Transfusion Medicine)", "Clinical Microscopy", "Histopathology and Cytopathology", "Molecular Biology", "Public Health"})
+        Me.TestType.Location = New System.Drawing.Point(206, 454)
+        Me.TestType.Name = "TestType"
+        Me.TestType.Size = New System.Drawing.Size(243, 32)
+        Me.TestType.TabIndex = 45
         '
         'ClearAddBtn
         '
@@ -227,9 +144,9 @@ Partial Class Laboratory
         Me.ClearAddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ClearAddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ClearAddBtn.ForeColor = System.Drawing.Color.White
-        Me.ClearAddBtn.Location = New System.Drawing.Point(790, 595)
+        Me.ClearAddBtn.Location = New System.Drawing.Point(718, 595)
         Me.ClearAddBtn.Name = "ClearAddBtn"
-        Me.ClearAddBtn.Size = New System.Drawing.Size(84, 39)
+        Me.ClearAddBtn.Size = New System.Drawing.Size(162, 39)
         Me.ClearAddBtn.TabIndex = 30
         Me.ClearAddBtn.Text = "Clear"
         Me.ClearAddBtn.UseVisualStyleBackColor = False
@@ -240,22 +157,105 @@ Partial Class Laboratory
         Me.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddBtn.ForeColor = System.Drawing.Color.White
-        Me.AddBtn.Location = New System.Drawing.Point(665, 595)
+        Me.AddBtn.Location = New System.Drawing.Point(529, 595)
         Me.AddBtn.Name = "AddBtn"
-        Me.AddBtn.Size = New System.Drawing.Size(84, 39)
+        Me.AddBtn.Size = New System.Drawing.Size(162, 39)
         Me.AddBtn.TabIndex = 29
         Me.AddBtn.Text = "Add"
         Me.AddBtn.UseVisualStyleBackColor = False
         '
-        'TestType
+        'Label6
         '
-        Me.TestType.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TestType.FormattingEnabled = True
-        Me.TestType.Items.AddRange(New Object() {"Clinical Chemistry", "Clinical Microbiology", "Hematology", "Blood banking and Serology (aka Immunohematology, Transfusion Medicine)", "Clinical Microscopy", "Histopathology and Cytopathology", "Molecular Biology", "Public Health"})
-        Me.TestType.Location = New System.Drawing.Point(318, 454)
-        Me.TestType.Name = "TestType"
-        Me.TestType.Size = New System.Drawing.Size(243, 32)
-        Me.TestType.TabIndex = 45
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label6.Location = New System.Drawing.Point(201, 545)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(26, 25)
+        Me.Label6.TabIndex = 26
+        Me.Label6.Text = "₱"
+        '
+        'Cost
+        '
+        Me.Cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Cost.Location = New System.Drawing.Point(233, 544)
+        Me.Cost.Maximum = New Decimal(New Integer() {999999, 0, 0, 0})
+        Me.Cost.Name = "Cost"
+        Me.Cost.Size = New System.Drawing.Size(216, 29)
+        Me.Cost.TabIndex = 25
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.Location = New System.Drawing.Point(201, 516)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(56, 25)
+        Me.Label5.TabIndex = 24
+        Me.Label5.Text = "Cost"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.Location = New System.Drawing.Point(524, 340)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(120, 25)
+        Me.Label4.TabIndex = 22
+        Me.Label4.Text = "Description"
+        '
+        'Description
+        '
+        Me.Description.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Description.Location = New System.Drawing.Point(529, 368)
+        Me.Description.Multiline = True
+        Me.Description.Name = "Description"
+        Me.Description.Size = New System.Drawing.Size(345, 205)
+        Me.Description.TabIndex = 21
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.Location = New System.Drawing.Point(201, 426)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(101, 25)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Test type"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.Location = New System.Drawing.Point(201, 340)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(113, 25)
+        Me.Label2.TabIndex = 18
+        Me.Label2.Text = "Test name"
+        '
+        'TestName
+        '
+        Me.TestName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TestName.Location = New System.Drawing.Point(206, 368)
+        Me.TestName.Name = "TestName"
+        Me.TestName.Size = New System.Drawing.Size(243, 29)
+        Me.TestName.TabIndex = 12
+        '
+        'TabPage2
+        '
+        Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.DiseaseTbl)
+        Me.TabPage2.Controls.Add(Me.Label1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(1097, 651)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "Disease / Illness Records"
         '
         'Laboratory
         '
@@ -272,9 +272,9 @@ Partial Class Laboratory
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.Cost, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.Cost, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
