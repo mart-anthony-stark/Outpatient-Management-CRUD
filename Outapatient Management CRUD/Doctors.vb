@@ -131,14 +131,16 @@
     'Handle delete doctor record'
     Private Sub DeleteDoctor(ByVal id As String)
         Dim ans As String
-        ans = MsgBox("Are you sure you wamt to delete this record?", vbYesNo)
+        ans = MsgBox("Records in other table that needs this info will also be deleted. Are you sure you want to delete this record?", vbYesNo)
         If ans = vbYes Then
             Try
+                readuery("DELETE FROM appointment WHERE doctor=" & id)
                 readuery("DELETE FROM doctor WHERE doctor_id=" & id)
                 FetchData()
                 ClearEditFields()
                 MsgBox("Doctor record was successfully deleted")
                 Appointments.FetchCmbData()
+                Appointments.FetchAppointments()
             Catch ex As Exception
                 MsgBox(ex.Message)
             End Try
