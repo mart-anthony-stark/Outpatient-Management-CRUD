@@ -38,6 +38,7 @@
         PatientsBtn.BackColor = Color.FromArgb(255, 255, 255)
         AppointmentsBtn.BackColor = Color.FromArgb(255, 255, 255)
         DoctorsBtn.BackColor = Color.FromArgb(255, 255, 255)
+        LaboratoryBtn.BackColor = Color.FromArgb(255, 255, 255)
 
         If (activePanel.Equals("Dashboard")) Then
             DashboardBtn.BackColor = Color.FromArgb(239, 243, 246)
@@ -48,7 +49,7 @@
         ElseIf (activePanel.Equals("Appointments")) Then
             AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
         ElseIf (activePanel.Equals("Laboratory")) Then
-            AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
+            LaboratoryBtn.BackColor = Color.FromArgb(239, 243, 246)
         End If
     End Sub
 
