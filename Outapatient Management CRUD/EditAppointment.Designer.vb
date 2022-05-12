@@ -195,8 +195,8 @@ Partial Class EditAppointment
         '
         Me.AptId.AutoSize = True
         Me.AptId.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AptId.ForeColor = System.Drawing.Color.SteelBlue
-        Me.AptId.Location = New System.Drawing.Point(605, 9)
+        Me.AptId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.AptId.Location = New System.Drawing.Point(600, 9)
         Me.AptId.Name = "AptId"
         Me.AptId.Size = New System.Drawing.Size(0, 25)
         Me.AptId.TabIndex = 54
