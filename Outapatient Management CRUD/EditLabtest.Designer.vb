@@ -182,7 +182,7 @@ Partial Class EditLabtest
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TestName)
         Me.Name = "EditLabtest"
-        Me.Text = "EditLabtest"
+        Me.Text = "Edit Labtest"
         CType(Me.Cost, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
