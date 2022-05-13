@@ -40,11 +40,24 @@ Partial Class Dashboard
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.PatientName = New System.Windows.Forms.Label()
+        Me.DoctorName = New System.Windows.Forms.Label()
+        Me.AppointmentType = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DateText = New System.Windows.Forms.Label()
+        Me.TimeText = New System.Windows.Forms.Label()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -274,12 +287,159 @@ Partial Class Dashboard
         Me.PictureBox5.TabIndex = 18
         Me.PictureBox5.TabStop = False
         '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.TimeText)
+        Me.Panel1.Controls.Add(Me.DateText)
+        Me.Panel1.Controls.Add(Me.Label11)
+        Me.Panel1.Controls.Add(Me.Label10)
+        Me.Panel1.Controls.Add(Me.AppointmentType)
+        Me.Panel1.Controls.Add(Me.DoctorName)
+        Me.Panel1.Controls.Add(Me.PatientName)
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Controls.Add(Me.Label6)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Location = New System.Drawing.Point(417, 281)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(648, 138)
+        Me.Panel1.TabIndex = 19
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(3, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(260, 25)
+        Me.Label7.TabIndex = 41
+        Me.Label7.Text = "Last Appointment Made"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(17, 41)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(163, 20)
+        Me.Label6.TabIndex = 42
+        Me.Label6.Text = "Outpatient's Name:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(17, 66)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(132, 20)
+        Me.Label8.TabIndex = 43
+        Me.Label8.Text = "Doctor's Name:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(17, 91)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(159, 20)
+        Me.Label9.TabIndex = 44
+        Me.Label9.Text = "Appointment Type:"
+        '
+        'PatientName
+        '
+        Me.PatientName.AutoSize = True
+        Me.PatientName.BackColor = System.Drawing.Color.Transparent
+        Me.PatientName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.PatientName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.PatientName.Location = New System.Drawing.Point(187, 41)
+        Me.PatientName.Name = "PatientName"
+        Me.PatientName.Size = New System.Drawing.Size(0, 20)
+        Me.PatientName.TabIndex = 45
+        '
+        'DoctorName
+        '
+        Me.DoctorName.AutoSize = True
+        Me.DoctorName.BackColor = System.Drawing.Color.Transparent
+        Me.DoctorName.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DoctorName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.DoctorName.Location = New System.Drawing.Point(187, 66)
+        Me.DoctorName.Name = "DoctorName"
+        Me.DoctorName.Size = New System.Drawing.Size(0, 20)
+        Me.DoctorName.TabIndex = 46
+        '
+        'AppointmentType
+        '
+        Me.AppointmentType.AutoSize = True
+        Me.AppointmentType.BackColor = System.Drawing.Color.Transparent
+        Me.AppointmentType.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AppointmentType.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.AppointmentType.Location = New System.Drawing.Point(187, 91)
+        Me.AppointmentType.Name = "AppointmentType"
+        Me.AppointmentType.Size = New System.Drawing.Size(0, 20)
+        Me.AppointmentType.TabIndex = 47
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.Transparent
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label10.Location = New System.Drawing.Point(494, 4)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(53, 20)
+        Me.Label10.TabIndex = 48
+        Me.Label10.Text = "Date:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.BackColor = System.Drawing.Color.Transparent
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label11.Location = New System.Drawing.Point(494, 26)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(52, 20)
+        Me.Label11.TabIndex = 49
+        Me.Label11.Text = "Time:"
+        '
+        'DateText
+        '
+        Me.DateText.AutoSize = True
+        Me.DateText.BackColor = System.Drawing.Color.Transparent
+        Me.DateText.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DateText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.DateText.Location = New System.Drawing.Point(548, 5)
+        Me.DateText.Name = "DateText"
+        Me.DateText.Size = New System.Drawing.Size(0, 20)
+        Me.DateText.TabIndex = 50
+        '
+        'TimeText
+        '
+        Me.TimeText.AutoSize = True
+        Me.TimeText.BackColor = System.Drawing.Color.Transparent
+        Me.TimeText.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TimeText.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.TimeText.Location = New System.Drawing.Point(548, 25)
+        Me.TimeText.Name = "TimeText"
+        Me.TimeText.Size = New System.Drawing.Size(0, 20)
+        Me.TimeText.TabIndex = 51
+        '
         'Dashboard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1121, 715)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Label4)
@@ -307,6 +467,8 @@ Partial Class Dashboard
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -329,4 +491,16 @@ Partial Class Dashboard
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TimeText As System.Windows.Forms.Label
+    Friend WithEvents DateText As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents AppointmentType As System.Windows.Forms.Label
+    Friend WithEvents DoctorName As System.Windows.Forms.Label
+    Friend WithEvents PatientName As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class
