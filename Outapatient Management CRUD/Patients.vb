@@ -37,17 +37,6 @@
         End If
     End Sub
 
-    'Handles search patient ID'
-    Private Sub SearchBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SearchBtn.Click
-        Dim id As String
-        id = SearchBox.Text
-        If (Not IsInputNumeric(id)) Then
-            MsgBox("Invalid ID. You must input only numeric characters")
-            Return
-        End If
-        SearchData(id)
-    End Sub
-
     'Handle query for searching patient and populating edit field
     Private Sub SearchData(ByVal id As String)
         Try
@@ -175,19 +164,39 @@
 
     'Method that handles edit or delete click in datagrid
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As DataGridViewCellEventArgs) Handles PatientDataGrid.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
-        Dim row As System.Windows.Forms.DataGridViewRow = PatientDataGrid.Rows(e.RowIndex)
-        Dim id As String = row.Cells(2).Value.ToString
-        If TypeOf column Is DataGridViewButtonColumn AndAlso
-            e.RowIndex >= 0 Then
-            'TODO - Button Clicked - Execute Code Here
-            If (column.HeaderText Is "Edit") Then
-                SearchData(id)
-            ElseIf (column.HeaderText Is "Delete") Then
-                deletePatient(id)
+        Try
+            Dim senderGrid = DirectCast(sender, DataGridView)
+            Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+            Dim row As System.Windows.Forms.DataGridViewRow = PatientDataGrid.Rows(e.RowIndex)
+            Dim id As String = row.Cells(2).Value.ToString
+            If TypeOf column Is DataGridViewButtonColumn AndAlso
+                e.RowIndex >= 0 Then
+                'TODO - Button Clicked - Execute Code Here
+                If (column.HeaderText Is "Edit") Then
+                    SearchData(id)
+                ElseIf (column.HeaderText Is "Delete") Then
+                    deletePatient(id)
+                End If
             End If
-        End If
+        Catch ex As Exception
 
+        End Try
+        
+
+    End Sub
+
+    'Search name or id
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Try
+            reload("SELECT patient_id AS ID, concat(firstname, ' ',lastname) AS Name, date_of_birth AS 'Date of Birth', sex AS Sex, contact_number AS Contact FROM patient WHERE patient_id='" & SearchBox.Text & "' OR firstname='" & SearchBox.Text & "' OR lastname='" & SearchBox.Text & "'", PatientDataGrid)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    'Refresh
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+        SearchBox.Text = ""
+        FetchAllPatients()
     End Sub
 End Class
