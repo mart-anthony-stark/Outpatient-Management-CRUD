@@ -53,7 +53,8 @@ Partial Class Laboratory
         Me.LabtestTbl.AllowUserToAddRows = False
         Me.LabtestTbl.AllowUserToDeleteRows = False
         Me.LabtestTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.LabtestTbl.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.LabtestTbl.BackgroundColor = System.Drawing.Color.White
+        Me.LabtestTbl.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LabtestTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.LabtestTbl.Location = New System.Drawing.Point(15, 45)
         Me.LabtestTbl.Name = "LabtestTbl"
@@ -64,10 +65,10 @@ Partial Class Laboratory
         'LabtestLbl
         '
         Me.LabtestLbl.AutoSize = True
-        Me.LabtestLbl.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabtestLbl.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabtestLbl.Location = New System.Drawing.Point(10, 17)
         Me.LabtestLbl.Name = "LabtestLbl"
-        Me.LabtestLbl.Size = New System.Drawing.Size(252, 25)
+        Me.LabtestLbl.Size = New System.Drawing.Size(262, 24)
         Me.LabtestLbl.TabIndex = 11
         Me.LabtestLbl.Text = "Laboratory Test Services"
         '
@@ -86,7 +87,8 @@ Partial Class Laboratory
         Me.DiseaseTbl.AllowUserToAddRows = False
         Me.DiseaseTbl.AllowUserToDeleteRows = False
         Me.DiseaseTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DiseaseTbl.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.DiseaseTbl.BackgroundColor = System.Drawing.Color.White
+        Me.DiseaseTbl.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.DiseaseTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DiseaseTbl.Location = New System.Drawing.Point(15, 45)
         Me.DiseaseTbl.Name = "DiseaseTbl"
@@ -188,7 +190,7 @@ Partial Class Laboratory
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(201, 516)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 25)
@@ -199,7 +201,7 @@ Partial Class Laboratory
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(524, 340)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 25)
@@ -219,7 +221,7 @@ Partial Class Laboratory
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(201, 426)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 25)
@@ -230,7 +232,7 @@ Partial Class Laboratory
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(201, 340)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(113, 25)
