@@ -113,6 +113,12 @@
     <Compile Include="EditLabtest.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditTestResult.Designer.vb">
+      <DependentUpon>EditTestResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditTestResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="GridModule.vb" />
     <Compile Include="Laboratory.Designer.vb">
       <DependentUpon>Laboratory.vb</DependentUpon>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditLabtest.resx">
       <DependentUpon>EditLabtest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditTestResult.resx">
+      <DependentUpon>EditTestResult.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratory.resx">
       <DependentUpon>Laboratory.vb</DependentUpon>
