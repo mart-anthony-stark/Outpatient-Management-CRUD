@@ -2,17 +2,21 @@
 
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        FetchData()
+    End Sub
 
+    Private Sub FetchData()
         Try
             strconn.Open()
             With cmd
                 .Connection = strconn
-                .CommandText = "SELECT (SELECT COUNT(*) from patient) AS Patients, (SELECT COUNT(*) from doctor) AS Doctors, (SELECT COUNT(*) from appointment) AS Appointments"
+                .CommandText = "SELECT (SELECT COUNT(*) from patient) AS Patients, (SELECT COUNT(*) from doctor) AS Doctors, (SELECT COUNT(*) from appointment) AS Appointments, (SELECT COUNT(*) from laboratorytest) AS Labtests"
                 cmdread = .ExecuteReader
                 If (cmdread.Read()) Then
                     DoctorsCount.Text = cmdread.GetString(1)
                     PatientsCount.Text = cmdread.GetString(0)
                     AppointmentsCount.Text = cmdread.GetString(2)
+                    TestCount.Text = cmdread.GetString(3)
                 Else
                 End If
             End With
@@ -40,5 +44,13 @@
 
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         Main.LoadForm(Appointments)
+    End Sub
+
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+        Main.LoadForm(Laboratory)
+    End Sub
+
+    Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.Click
+        FetchData()
     End Sub
 End Class
