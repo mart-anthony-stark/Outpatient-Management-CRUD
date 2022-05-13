@@ -57,7 +57,44 @@ Public Class LabtestResult
         End Try
     End Sub
 
-    Private Sub LabtestResultTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles LabtestResultTbl.CellContentClick
+    Private Sub EditResult(ByVal id As String)
+        EditTestResult.idText.Text = id
 
+        EditTestResult.Show()
+    End Sub
+
+    Private Sub DeleteResult(ByVal id As String)
+        Dim ans As String
+        ans = MsgBox("Are you sure you wamt to delete this record?", vbYesNo)
+        If ans = vbYes Then
+            Try
+                readuery("DELETE FROM testresult WHERE result_id=" & id)
+                FetchTestResults()
+                MsgBox("Laboratory Test Result record was successfully deleted")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    Private Sub LabtestResultTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles LabtestResultTbl.CellContentClick
+        Try
+            Dim senderGrid = DirectCast(sender, DataGridView)
+            Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+            Dim row As System.Windows.Forms.DataGridViewRow = LabtestResultTbl.Rows(e.RowIndex)
+            Dim id As String = row.Cells(2).Value.ToString
+            If TypeOf column Is DataGridViewButtonColumn AndAlso
+                e.RowIndex >= 0 Then
+                'TODO - Button Clicked - Execute Code Here
+                If (column.HeaderText Is "Edit") Then
+                    EditResult(id)
+                ElseIf (column.HeaderText Is "Delete") Then
+                    DeleteResult(id)
+                End If
+                FetchLabtests()
+            End If
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
