@@ -42,7 +42,6 @@
                     TimeText.Text = cmdread.GetString(4)
                     AppointmentType.Text = cmdread.GetString(5)
                 Else
-                    MsgBox("No appt")
                 End If
             End With
         Catch ex As Exception

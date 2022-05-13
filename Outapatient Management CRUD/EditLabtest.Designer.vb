@@ -34,7 +34,12 @@ Partial Class EditLabtest
         Me.Label1 = New System.Windows.Forms.Label()
         Me.idText = New System.Windows.Forms.Label()
         Me.TestType = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.Cost, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label6
@@ -42,7 +47,7 @@ Partial Class EditLabtest
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label6.Location = New System.Drawing.Point(145, 346)
+        Me.Label6.Location = New System.Drawing.Point(148, 407)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(26, 25)
         Me.Label6.TabIndex = 35
@@ -51,7 +56,7 @@ Partial Class EditLabtest
         'Cost
         '
         Me.Cost.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Cost.Location = New System.Drawing.Point(177, 345)
+        Me.Cost.Location = New System.Drawing.Point(180, 406)
         Me.Cost.Maximum = New Decimal(New Integer() {999999, 0, 0, 0})
         Me.Cost.Name = "Cost"
         Me.Cost.Size = New System.Drawing.Size(221, 29)
@@ -61,8 +66,8 @@ Partial Class EditLabtest
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label5.Location = New System.Drawing.Point(145, 317)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(148, 378)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(56, 25)
         Me.Label5.TabIndex = 33
@@ -72,8 +77,8 @@ Partial Class EditLabtest
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label4.Location = New System.Drawing.Point(439, 141)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(442, 202)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(120, 25)
         Me.Label4.TabIndex = 32
@@ -82,7 +87,7 @@ Partial Class EditLabtest
         'Description
         '
         Me.Description.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Description.Location = New System.Drawing.Point(444, 169)
+        Me.Description.Location = New System.Drawing.Point(447, 230)
         Me.Description.Multiline = True
         Me.Description.Name = "Description"
         Me.Description.Size = New System.Drawing.Size(262, 205)
@@ -92,8 +97,8 @@ Partial Class EditLabtest
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label3.Location = New System.Drawing.Point(145, 227)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(148, 288)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(101, 25)
         Me.Label3.TabIndex = 30
@@ -103,8 +108,8 @@ Partial Class EditLabtest
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label2.Location = New System.Drawing.Point(145, 141)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(148, 202)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(113, 25)
         Me.Label2.TabIndex = 28
@@ -113,7 +118,7 @@ Partial Class EditLabtest
         'TestName
         '
         Me.TestName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TestName.Location = New System.Drawing.Point(150, 169)
+        Me.TestName.Location = New System.Drawing.Point(153, 230)
         Me.TestName.Name = "TestName"
         Me.TestName.Size = New System.Drawing.Size(248, 29)
         Me.TestName.TabIndex = 27
@@ -125,7 +130,7 @@ Partial Class EditLabtest
         Me.EditSaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.EditSaveBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.EditSaveBtn.ForeColor = System.Drawing.Color.White
-        Me.EditSaveBtn.Location = New System.Drawing.Point(611, 411)
+        Me.EditSaveBtn.Location = New System.Drawing.Point(614, 472)
         Me.EditSaveBtn.Name = "EditSaveBtn"
         Me.EditSaveBtn.Size = New System.Drawing.Size(95, 35)
         Me.EditSaveBtn.TabIndex = 41
@@ -136,8 +141,8 @@ Partial Class EditLabtest
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
-        Me.Label1.Location = New System.Drawing.Point(674, 22)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(677, 83)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(32, 25)
         Me.Label1.TabIndex = 42
@@ -148,7 +153,7 @@ Partial Class EditLabtest
         Me.idText.AutoSize = True
         Me.idText.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.idText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.idText.Location = New System.Drawing.Point(712, 22)
+        Me.idText.Location = New System.Drawing.Point(715, 83)
         Me.idText.Name = "idText"
         Me.idText.Size = New System.Drawing.Size(0, 25)
         Me.idText.TabIndex = 43
@@ -158,17 +163,65 @@ Partial Class EditLabtest
         Me.TestType.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TestType.FormattingEnabled = True
         Me.TestType.Items.AddRange(New Object() {"Clinical Chemistry", "Clinical Microbiology", "Hematology", "Blood banking and Serology (aka Immunohematology, Transfusion Medicine)", "Clinical Microscopy", "Histopathology and Cytopathology", "Molecular Biology", "Public Health"})
-        Me.TestType.Location = New System.Drawing.Point(150, 255)
+        Me.TestType.Location = New System.Drawing.Point(153, 316)
         Me.TestType.Name = "TestType"
         Me.TestType.Size = New System.Drawing.Size(248, 32)
         Me.TestType.TabIndex = 44
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Label9)
+        Me.Panel1.Controls.Add(Me.Label7)
+        Me.Panel1.Controls.Add(Me.Label8)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(929, 48)
+        Me.Panel1.TabIndex = 58
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(12, 9)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(312, 25)
+        Me.Label9.TabIndex = 3
+        Me.Label9.Text = "Edit Laboratory Test Service"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(880, 9)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(24, 25)
+        Me.Label7.TabIndex = 2
+        Me.Label7.Text = "x"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(854, 9)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(20, 25)
+        Me.Label8.TabIndex = 1
+        Me.Label8.Text = "-"
         '
         'EditLabtest
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(863, 528)
+        Me.ClientSize = New System.Drawing.Size(929, 595)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.TestType)
         Me.Controls.Add(Me.idText)
         Me.Controls.Add(Me.Label1)
@@ -181,9 +234,12 @@ Partial Class EditLabtest
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TestName)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "EditLabtest"
         Me.Text = "Edit Labtest"
         CType(Me.Cost, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -200,4 +256,8 @@ Partial Class EditLabtest
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents idText As System.Windows.Forms.Label
     Friend WithEvents TestType As System.Windows.Forms.ComboBox
+    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class

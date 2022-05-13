@@ -40,6 +40,14 @@ Partial Class Laboratory
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TestName = New System.Windows.Forms.TextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.DisName = New System.Windows.Forms.TextBox()
+        Me.DisType = New System.Windows.Forms.ComboBox()
+        Me.DisDescription = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.LabtestTbl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DiseaseTbl, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl1.SuspendLayout()
@@ -250,6 +258,14 @@ Partial Class Laboratory
         'TabPage2
         '
         Me.TabPage2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.Button2)
+        Me.TabPage2.Controls.Add(Me.Label9)
+        Me.TabPage2.Controls.Add(Me.Label8)
+        Me.TabPage2.Controls.Add(Me.Label7)
+        Me.TabPage2.Controls.Add(Me.DisDescription)
+        Me.TabPage2.Controls.Add(Me.DisType)
+        Me.TabPage2.Controls.Add(Me.DisName)
         Me.TabPage2.Controls.Add(Me.DiseaseTbl)
         Me.TabPage2.Controls.Add(Me.Label1)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
@@ -258,6 +274,92 @@ Partial Class Laboratory
         Me.TabPage2.Size = New System.Drawing.Size(1097, 651)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Disease / Illness Records"
+        '
+        'DisName
+        '
+        Me.DisName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisName.Location = New System.Drawing.Point(225, 386)
+        Me.DisName.Name = "DisName"
+        Me.DisName.Size = New System.Drawing.Size(283, 29)
+        Me.DisName.TabIndex = 14
+        '
+        'DisType
+        '
+        Me.DisType.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisType.FormattingEnabled = True
+        Me.DisType.Items.AddRange(New Object() {"Systematic Infection", "Infectious", "Deficiency", "Hereditary", "Physiological"})
+        Me.DisType.Location = New System.Drawing.Point(229, 492)
+        Me.DisType.Name = "DisType"
+        Me.DisType.Size = New System.Drawing.Size(279, 32)
+        Me.DisType.TabIndex = 15
+        '
+        'DisDescription
+        '
+        Me.DisDescription.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisDescription.Location = New System.Drawing.Point(531, 386)
+        Me.DisDescription.Multiline = True
+        Me.DisDescription.Name = "DisDescription"
+        Me.DisDescription.Size = New System.Drawing.Size(283, 166)
+        Me.DisDescription.TabIndex = 16
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label7.Location = New System.Drawing.Point(224, 358)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(152, 25)
+        Me.Label7.TabIndex = 49
+        Me.Label7.Text = "Disease Name"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(224, 464)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(144, 25)
+        Me.Label8.TabIndex = 50
+        Me.Label8.Text = "Disease Type"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(526, 358)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(120, 25)
+        Me.Label9.TabIndex = 51
+        Me.Label9.Text = "Description"
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.IndianRed
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(652, 576)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(162, 39)
+        Me.Button1.TabIndex = 53
+        Me.Button1.Text = "Clear"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.MediumSeaGreen
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(471, 576)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(162, 39)
+        Me.Button2.TabIndex = 52
+        Me.Button2.Text = "Add"
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Laboratory
         '
@@ -298,4 +400,12 @@ Partial Class Laboratory
     Friend WithEvents ClearAddBtn As System.Windows.Forms.Button
     Friend WithEvents AddBtn As System.Windows.Forms.Button
     Friend WithEvents TestType As System.Windows.Forms.ComboBox
+    Friend WithEvents DisDescription As System.Windows.Forms.TextBox
+    Friend WithEvents DisType As System.Windows.Forms.ComboBox
+    Friend WithEvents DisName As System.Windows.Forms.TextBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

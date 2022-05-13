@@ -31,4 +31,12 @@
         Description.Text = Nothing
         Cost.Value = 0
     End Sub
+
+    Private Sub Label8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label8.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Label7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label7.Click
+        Me.Close()
+    End Sub
 End Class

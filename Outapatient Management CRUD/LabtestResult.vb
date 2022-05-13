@@ -10,6 +10,8 @@ Public Class LabtestResult
 
     Public Sub FetchLabtests()
         Try
+            DiseaseCmb.SelectedText = Nothing
+            LabtestCmb.SelectedText = Nothing
             Dim test_table As New DataTable()
             Dim test_adapter As New MySqlDataAdapter("SELECT test_id, concat(test_name,' (',test_type, ')') AS display from laboratorytest", strconn)
             Dim disease_table As New DataTable()
@@ -29,7 +31,7 @@ Public Class LabtestResult
         End Try
     End Sub
 
-    Private Sub FetchTestResults()
+    Public Sub FetchTestResults()
         Try
             reload("SELECT result_id AS ID, laboratorytest.test_name AS `Laboratory Test`, laboratorytest.description AS `Result Description`, disease.name AS Disease,testresult.date AS Date FROM testresult, laboratorytest, disease WHERE laboratorytest.test_id=testresult.test AND disease.disease_id = testresult.disease", LabtestResultTbl)
         Catch ex As Exception

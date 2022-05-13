@@ -34,4 +34,12 @@
         Appointments.DeleteAppointment(AptId.Text)
         Me.Hide()
     End Sub
+
+    Private Sub Label2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label2.Click
+        WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub Label4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label4.Click
+        Me.Close()
+    End Sub
 End Class

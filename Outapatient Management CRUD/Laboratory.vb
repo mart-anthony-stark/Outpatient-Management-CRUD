@@ -4,10 +4,10 @@
         FetchDiseases()
         FetchLabTests()
         AddControls(DiseaseTbl)
-        AddEdit(LabtestTbl)
+        AddControls(LabtestTbl)
     End Sub
 
-    Private Sub FetchDiseases()
+    Public Sub FetchDiseases()
         Try
             reload("SELECT * from disease", DiseaseTbl)
         Catch ex As Exception
@@ -23,6 +23,45 @@
         End Try
     End Sub
 
+    'DELETE DISEASE RECORD
+    Private Sub DeleteDisease(ByVal id As String)
+        Dim ans As String
+        ans = MsgBox("Are you sure you want to delete this record?", vbYesNo)
+        If ans = vbYes Then
+            Try
+                readuery("DELETE FROM disease WHERE disease_id=" & id)
+                MsgBox("Disease record was deleted successfully")
+                FetchDiseases()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
+    'Edit Disease
+    Private Sub EditDisease(ByVal id As String)
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = "SELECT * FROM disease WHERE disease_id='" & id & "'"
+                cmdread = .ExecuteReader
+                If (cmdread.Read()) Then
+                    EditDiseaseForm.idText.Text = id
+                    EditDiseaseForm.DisName.Text = cmdread.GetString(1)
+                    EditDiseaseForm.DisType.Text = cmdread.GetString(2)
+                    EditDiseaseForm.DisDescription.Text = cmdread.GetString(3)
+                    EditDiseaseForm.Show()
+                Else
+                    MsgBox("Disease Record is not found in database using the id you specified")
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        strconn.Close()
+    End Sub
+
     'Method that handles edit or delete click in disease table
     Private Sub DiseaseTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DiseaseTbl.CellContentClick
         Try
@@ -30,15 +69,18 @@
             Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
             Dim row As System.Windows.Forms.DataGridViewRow = DiseaseTbl.Rows(e.RowIndex)
             Dim id As String = row.Cells(2).Value.ToString
-            MsgBox(column.HeaderText)
+            'MsgBox(column.HeaderText)
             If TypeOf column Is DataGridViewButtonColumn AndAlso
                 e.RowIndex >= 0 Then
                 'TODO - Button Clicked - Execute Code Here
                 If (column.HeaderText Is "Edit") Then
-                    'SearchData(id)
+                    EditDisease(id)
                 ElseIf (column.HeaderText Is "Delete") Then
-                    'DeleteDoctor(id)
+                    DeleteDisease(id)
                 End If
+
+                LabtestResult.FetchLabtests()
+                LabtestResult.FetchTestResults()
             End If
         Catch ex As Exception
 
@@ -46,12 +88,27 @@
         
     End Sub
 
+    'Delete service
+    Private Sub DeleteLabTestService(ByVal id As String)
+        Dim ans As String
+        ans = MsgBox("Are you sure you want to delete this record?", vbYesNo)
+        If ans = vbYes Then
+            Try
+                readuery("DELETE FROM laboratorytest WHERE test_id=" & id)
+                FetchLabTests()
+                MsgBox("Laboratory test record was successfully deleted")
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
+    End Sub
+
     Private Sub LabtestTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles LabtestTbl.CellContentClick
         Try
             Dim senderGrid = DirectCast(sender, DataGridView)
             Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
             Dim row As System.Windows.Forms.DataGridViewRow = LabtestTbl.Rows(e.RowIndex)
-            Dim id As String = row.Cells(1).Value.ToString
+            Dim id As String = row.Cells(2).Value.ToString
             'MsgBox(column.HeaderText & id)
             If TypeOf column Is DataGridViewButtonColumn AndAlso
                 e.RowIndex >= 0 Then
@@ -59,13 +116,15 @@
                 If (column.HeaderText Is "Edit") Then
                     SearchData(id)
                 ElseIf (column.HeaderText Is "Delete") Then
-                    'DeleteDoctor(id)
+                    DeleteLabTestService(id)
                 End If
+                LabtestResult.FetchLabtests()
+                LabtestResult.FetchTestResults()
             End If
         Catch ex As Exception
 
         End Try
-        
+
     End Sub
 
     'Clear labtest inputs
@@ -125,5 +184,36 @@
             MsgBox(ex.Message)
         End Try
         strconn.Close()
+    End Sub
+
+    'Clear disease inputs
+    Private Sub ClearDiseaseInputs()
+        DisDescription.Text = ""
+        DisType.Text = Nothing
+        DisName.Text = ""
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        ClearDiseaseInputs()
+    End Sub
+
+    'Add disease record
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Dim desc As String = DisDescription.Text
+        Dim name As String = DisName.Text
+        Dim type As String = DisType.Text
+
+        If (String.IsNullOrEmpty(desc) Or String.IsNullOrEmpty(name) Or String.IsNullOrEmpty(type)) Then
+            MessageBox.Show("Input fields must be filled", "Invalid Inputs", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Try
+                readuery("INSERT INTO disease VALUES(null, '" & name & "', '" & type & "', '" & desc & "')")
+                FetchDiseases()
+                LabtestResult.FetchLabtests()
+                ClearDiseaseInputs()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        End If
     End Sub
 End Class

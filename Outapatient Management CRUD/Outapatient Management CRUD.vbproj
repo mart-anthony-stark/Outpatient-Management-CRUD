@@ -101,6 +101,12 @@
     <Compile Include="EditAppointment.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditDiseaseForm.Designer.vb">
+      <DependentUpon>EditDiseaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditDiseaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EditLabtest.Designer.vb">
       <DependentUpon>EditLabtest.vb</DependentUpon>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditAppointment.resx">
       <DependentUpon>EditAppointment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditDiseaseForm.resx">
+      <DependentUpon>EditDiseaseForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditLabtest.resx">
       <DependentUpon>EditLabtest.vb</DependentUpon>
