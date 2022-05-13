@@ -47,10 +47,10 @@ Partial Class Appointments
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(29, 28)
+        Me.Label5.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(12, 28)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(143, 25)
+        Me.Label5.Size = New System.Drawing.Size(152, 24)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Appointments"
         '
@@ -59,7 +59,8 @@ Partial Class Appointments
         Me.AppointmentTbl.AllowUserToAddRows = False
         Me.AppointmentTbl.AllowUserToDeleteRows = False
         Me.AppointmentTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.AppointmentTbl.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.AppointmentTbl.BackgroundColor = System.Drawing.Color.White
+        Me.AppointmentTbl.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.AppointmentTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.AppointmentTbl.Location = New System.Drawing.Point(12, 56)
         Me.AppointmentTbl.Name = "AppointmentTbl"
@@ -98,7 +99,7 @@ Partial Class Appointments
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(219, 378)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(75, 25)
@@ -109,7 +110,7 @@ Partial Class Appointments
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(593, 378)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(79, 25)
@@ -120,7 +121,7 @@ Partial Class Appointments
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(219, 463)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 25)
@@ -176,7 +177,7 @@ Partial Class Appointments
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(595, 462)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(59, 25)
@@ -195,7 +196,7 @@ Partial Class Appointments
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(219, 539)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(186, 25)
