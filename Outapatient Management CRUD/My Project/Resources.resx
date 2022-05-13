@@ -124,8 +124,14 @@
   <data name="fontisto_doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fontisto_doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Hello! (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Hello! (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fluent_patient-32-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fluent_patient-32-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabler_microscope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler_microscope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon-park-outline_appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-park-outline_appointment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,7 +139,10 @@
   <data name="196123" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\196123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hello! (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hello! (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
