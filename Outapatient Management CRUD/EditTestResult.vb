@@ -38,4 +38,19 @@ Public Class EditTestResult
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    'Save labtest
+    Private Sub AddBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AddBtn.Click
+        Dim disease As String = DiseaseCmb.SelectedValue
+        Dim labtest As String = LabtestCmb.SelectedValue
+        Dim _date As String = Format(ResultDate.Value, "yyyy-MM-dd")
+
+        Try
+            readuery("UPDATE testresult SET disease='" & disease & "', test='" & labtest & "', date='" & _date & "' WHERE result_id=" & idText.Text)
+            MsgBox("Laboratory Test result record was updated successfully")
+            LabtestResult.FetchTestResults()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class
