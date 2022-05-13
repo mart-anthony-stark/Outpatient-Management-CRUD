@@ -120,6 +120,7 @@
                 End If
                 LabtestResult.FetchLabtests()
                 LabtestResult.FetchTestResults()
+                EditTestResult.FetchLabtests()
             End If
         Catch ex As Exception
 
@@ -209,6 +210,7 @@
             Try
                 readuery("INSERT INTO disease VALUES(null, '" & name & "', '" & type & "', '" & desc & "')")
                 FetchDiseases()
+                EditTestResult.FetchLabtests()
                 LabtestResult.FetchLabtests()
                 ClearDiseaseInputs()
             Catch ex As Exception
