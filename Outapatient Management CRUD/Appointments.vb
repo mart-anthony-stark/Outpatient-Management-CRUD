@@ -148,24 +148,29 @@ Public Class Appointments
 
     'Handle Inline edit and delete button
     Private Sub AppointmentTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles AppointmentTbl.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
-        Dim row As System.Windows.Forms.DataGridViewRow = AppointmentTbl.Rows(e.RowIndex)
-        Dim id As String = row.Cells(3).Value.ToString
-        'MsgBox(id & " - " & column.HeaderText)
-        If TypeOf column Is DataGridViewButtonColumn AndAlso
-            e.RowIndex >= 0 Then
-            'TODO - Button Clicked - Execute Code Here
-            If (column.HeaderText Is "Edit") Then
-                SearchData(id)
-            ElseIf (column.HeaderText Is "Delete") Then
-                DeleteAppointment(id)
-            ElseIf (column.HeaderText Is "Laboratory") Then
-                LabtestResult.AptID.Text = id
-                LabtestResult.PatientName.Text = row.Cells(4).Value.ToString
-                LabtestResult.DoctorName.Text = row.Cells(5).Value.ToString
-                Main.LoadForm(LabtestResult)
+        Try
+            Dim senderGrid = DirectCast(sender, DataGridView)
+            Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+            Dim row As System.Windows.Forms.DataGridViewRow = AppointmentTbl.Rows(e.RowIndex)
+            Dim id As String = row.Cells(3).Value.ToString
+            'MsgBox(id & " - " & column.HeaderText)
+            If TypeOf column Is DataGridViewButtonColumn AndAlso
+                e.RowIndex >= 0 Then
+                'TODO - Button Clicked - Execute Code Here
+                If (column.HeaderText Is "Edit") Then
+                    SearchData(id)
+                ElseIf (column.HeaderText Is "Delete") Then
+                    DeleteAppointment(id)
+                ElseIf (column.HeaderText Is "Laboratory") Then
+                    LabtestResult.AptID.Text = id
+                    LabtestResult.PatientName.Text = row.Cells(4).Value.ToString
+                    LabtestResult.DoctorName.Text = row.Cells(5).Value.ToString
+                    Main.LoadForm(LabtestResult)
+                End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 End Class
