@@ -57,10 +57,31 @@ Public Class LabtestResult
         End Try
     End Sub
 
+    'Edit labtest result
     Private Sub EditResult(ByVal id As String)
         EditTestResult.idText.Text = id
-
-        EditTestResult.Show()
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = "SELECT * FROM testresult WHERE result_id='" & id & "'"
+                cmdread = .ExecuteReader
+                If (cmdread.Read()) Then
+                    Dim labtest As String = cmdread.GetString(1)
+                    Dim disease As String = cmdread.GetString(3)
+                    EditTestResult.ResultDate.Value = cmdread.GetString(4)
+                    strconn.Close()
+                    EditTestResult.Show()
+                    EditTestResult.LabtestCmb.SelectedValue = labtest
+                    EditTestResult.DiseaseCmb.SelectedValue = disease
+                Else
+                    MsgBox("Labtest Result Record is not found in database using the id you specified")
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        strconn.Close()
     End Sub
 
     Private Sub DeleteResult(ByVal id As String)
