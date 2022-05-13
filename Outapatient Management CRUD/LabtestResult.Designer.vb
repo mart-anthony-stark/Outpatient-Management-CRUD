@@ -44,7 +44,7 @@ Partial Class LabtestResult
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(268, 540)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(73, 25)
@@ -55,7 +55,7 @@ Partial Class LabtestResult
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(268, 515)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(157, 25)
@@ -75,7 +75,7 @@ Partial Class LabtestResult
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(268, 449)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 25)
@@ -94,7 +94,7 @@ Partial Class LabtestResult
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(268, 378)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(162, 25)
@@ -106,7 +106,8 @@ Partial Class LabtestResult
         Me.LabtestResultTbl.AllowUserToAddRows = False
         Me.LabtestResultTbl.AllowUserToDeleteRows = False
         Me.LabtestResultTbl.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.LabtestResultTbl.BackgroundColor = System.Drawing.SystemColors.Control
+        Me.LabtestResultTbl.BackgroundColor = System.Drawing.Color.White
+        Me.LabtestResultTbl.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.LabtestResultTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.LabtestResultTbl.Location = New System.Drawing.Point(12, 125)
         Me.LabtestResultTbl.Name = "LabtestResultTbl"
@@ -136,7 +137,7 @@ Partial Class LabtestResult
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(15, 19)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(158, 25)
@@ -157,7 +158,7 @@ Partial Class LabtestResult
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(15, 54)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 25)
@@ -168,7 +169,7 @@ Partial Class LabtestResult
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(15, 87)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(75, 25)
