@@ -24,11 +24,12 @@ Partial Class Patients
     Private Sub InitializeComponent()
         Me.PatientDataGrid = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.SearchBox = New System.Windows.Forms.TextBox()
-        Me.SearchBtn = New System.Windows.Forms.Button()
         Me.AddBtn = New System.Windows.Forms.Button()
         Me.FirstnameBox = New System.Windows.Forms.TextBox()
         Me.LastnameBox = New System.Windows.Forms.TextBox()
@@ -62,6 +63,8 @@ Partial Class Patients
         Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -73,7 +76,8 @@ Partial Class Patients
         Me.PatientDataGrid.AllowUserToAddRows = False
         Me.PatientDataGrid.AllowUserToDeleteRows = False
         Me.PatientDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.PatientDataGrid.BackgroundColor = System.Drawing.SystemColors.ControlLight
+        Me.PatientDataGrid.BackgroundColor = System.Drawing.Color.White
+        Me.PatientDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.PatientDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.PatientDataGrid.Location = New System.Drawing.Point(19, 53)
         Me.PatientDataGrid.Name = "PatientDataGrid"
@@ -84,23 +88,46 @@ Partial Class Patients
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer), CType(CType(234, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.PictureBox2)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.PatientDataGrid)
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.SearchBtn)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1109, 308)
         Me.Panel2.TabIndex = 2
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.refresh
+        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox2.Location = New System.Drawing.Point(1032, 7)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox2.TabIndex = 8
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImage = Global.WindowsApplication1.My.Resources.Resources.search
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox1.Location = New System.Drawing.Point(987, 7)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(40, 40)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
+        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(21, 25)
+        Me.Label2.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(14, 25)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 25)
+        Me.Label2.Size = New System.Drawing.Size(128, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Outpatients"
         '
@@ -109,9 +136,9 @@ Partial Class Patients
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.SearchBox)
-        Me.Panel3.Location = New System.Drawing.Point(761, 8)
+        Me.Panel3.Location = New System.Drawing.Point(709, 8)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(168, 39)
+        Me.Panel3.Size = New System.Drawing.Size(272, 39)
         Me.Panel3.TabIndex = 6
         '
         'Label3
@@ -119,30 +146,17 @@ Partial Class Patients
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(10, 13)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(18, 13)
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "ID"
+        Me.Label3.Text = "ID or Name"
         '
         'SearchBox
         '
         Me.SearchBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchBox.Location = New System.Drawing.Point(34, 1)
+        Me.SearchBox.Location = New System.Drawing.Point(83, 1)
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(131, 35)
+        Me.SearchBox.Size = New System.Drawing.Size(183, 35)
         Me.SearchBox.TabIndex = 5
-        '
-        'SearchBtn
-        '
-        Me.SearchBtn.BackColor = System.Drawing.Color.MediumSeaGreen
-        Me.SearchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.SearchBtn.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchBtn.ForeColor = System.Drawing.Color.White
-        Me.SearchBtn.Location = New System.Drawing.Point(935, 7)
-        Me.SearchBtn.Name = "SearchBtn"
-        Me.SearchBtn.Size = New System.Drawing.Size(76, 39)
-        Me.SearchBtn.TabIndex = 4
-        Me.SearchBtn.Text = "Search"
-        Me.SearchBtn.UseVisualStyleBackColor = False
         '
         'AddBtn
         '
@@ -226,7 +240,7 @@ Partial Class Patients
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(62, 360)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(107, 25)
@@ -237,7 +251,7 @@ Partial Class Patients
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label5.Location = New System.Drawing.Point(62, 412)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(106, 25)
@@ -248,7 +262,7 @@ Partial Class Patients
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label6.Location = New System.Drawing.Point(63, 455)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(98, 25)
@@ -259,7 +273,7 @@ Partial Class Patients
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label7.Location = New System.Drawing.Point(62, 506)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(49, 25)
@@ -270,7 +284,7 @@ Partial Class Patients
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label8.Location = New System.Drawing.Point(62, 557)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 25)
@@ -294,7 +308,7 @@ Partial Class Patients
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label9.Location = New System.Drawing.Point(684, 560)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(86, 25)
@@ -305,7 +319,7 @@ Partial Class Patients
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label10.Location = New System.Drawing.Point(684, 509)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 25)
@@ -316,7 +330,7 @@ Partial Class Patients
         '
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label11.Location = New System.Drawing.Point(685, 458)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(98, 25)
@@ -327,7 +341,7 @@ Partial Class Patients
         '
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label12.Location = New System.Drawing.Point(684, 415)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(106, 25)
@@ -338,7 +352,7 @@ Partial Class Patients
         '
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.ForeColor = System.Drawing.Color.SteelBlue
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(72, Byte), Integer))
         Me.Label13.Location = New System.Drawing.Point(684, 363)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(107, 25)
@@ -443,7 +457,7 @@ Partial Class Patients
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label14.Location = New System.Drawing.Point(863, 311)
+        Me.Label14.Location = New System.Drawing.Point(863, 314)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(63, 25)
         Me.Label14.TabIndex = 31
@@ -511,6 +525,8 @@ Partial Class Patients
         CType(Me.PatientDataGrid, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -527,7 +543,6 @@ Partial Class Patients
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents AddBtn As System.Windows.Forms.Button
-    Friend WithEvents SearchBtn As System.Windows.Forms.Button
     Friend WithEvents SearchBox As System.Windows.Forms.TextBox
     Friend WithEvents Panel3 As System.Windows.Forms.Panel
     Friend WithEvents Label3 As System.Windows.Forms.Label
@@ -561,5 +576,7 @@ Partial Class Patients
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents DeleteBtn As System.Windows.Forms.Button
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
 
 End Class
