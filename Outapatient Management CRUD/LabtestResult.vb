@@ -5,6 +5,7 @@ Public Class LabtestResult
     Private Sub LabtestResult_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FetchLabtests()
         FetchTestResults()
+        AddControls(LabtestResultTbl)
     End Sub
 
     Public Sub FetchLabtests()
@@ -52,5 +53,9 @@ Public Class LabtestResult
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    Private Sub LabtestResultTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles LabtestResultTbl.CellContentClick
+
     End Sub
 End Class
