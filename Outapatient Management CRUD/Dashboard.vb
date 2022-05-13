@@ -3,6 +3,7 @@
 
     Private Sub Dashboard_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         FetchData()
+        FetchLastAppointment()
     End Sub
 
     Private Sub FetchData()
@@ -18,6 +19,30 @@
                     AppointmentsCount.Text = cmdread.GetString(2)
                     TestCount.Text = cmdread.GetString(3)
                 Else
+                End If
+            End With
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        strconn.Close()
+    End Sub
+
+    Private Sub FetchLastAppointment()
+        'select apt_id, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date, time, apt_type from appointment, doctor, patient WHERE patient_id=appointment.patient order by apt_id DESC LIMIT 1;
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = "select apt_id, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date, time, apt_type from appointment, doctor, patient WHERE patient_id=appointment.patient order by apt_id DESC LIMIT 1"
+                cmdread = .ExecuteReader
+                If (cmdread.Read()) Then
+                    PatientName.Text = cmdread.GetString(1)
+                    DoctorName.Text = cmdread.GetString(2)
+                    DateText.Text = cmdread.GetString(3).Split(" ")(0)
+                    TimeText.Text = cmdread.GetString(4)
+                    AppointmentType.Text = cmdread.GetString(5)
+                Else
+                    MsgBox("No appt")
                 End If
             End With
         Catch ex As Exception
@@ -50,7 +75,9 @@
         Main.LoadForm(Laboratory)
     End Sub
 
+    'Refresh
     Private Sub PictureBox5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox5.Click
         FetchData()
+        FetchLastAppointment()
     End Sub
 End Class
