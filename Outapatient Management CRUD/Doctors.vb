@@ -91,19 +91,24 @@
 
     'Method that handles edit or delete click in datagrid
     Private Sub DoctorDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DoctorDataGridView.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
-        Dim row As System.Windows.Forms.DataGridViewRow = DoctorDataGridView.Rows(e.RowIndex)
-        Dim id As String = row.Cells(2).Value.ToString
-        If TypeOf column Is DataGridViewButtonColumn AndAlso
-            e.RowIndex >= 0 Then
-            'TODO - Button Clicked - Execute Code Here
-            If (column.HeaderText Is "Edit") Then
-                SearchData(id)
-            ElseIf (column.HeaderText Is "Delete") Then
-                DeleteDoctor(id)
+        Try
+            Dim senderGrid = DirectCast(sender, DataGridView)
+            Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+            Dim row As System.Windows.Forms.DataGridViewRow = DoctorDataGridView.Rows(e.RowIndex)
+            Dim id As String = row.Cells(2).Value.ToString
+            If TypeOf column Is DataGridViewButtonColumn AndAlso
+                e.RowIndex >= 0 Then
+                'TODO - Button Clicked - Execute Code Here
+                If (column.HeaderText Is "Edit") Then
+                    SearchData(id)
+                ElseIf (column.HeaderText Is "Delete") Then
+                    DeleteDoctor(id)
+                End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 
     Private Sub EditCancelBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditCancelBtn.Click
@@ -149,5 +154,15 @@
 
     Private Sub EditDeleteBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles EditDeleteBtn.Click
         DeleteDoctor(currentPatId)
+    End Sub
+
+    'Refresh
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+        SearchBox.Text = ""
+        FetchData()
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        reload("SELECT doctor_id AS ID, concat(lastname, ', ', firstname) AS Name, specialization AS Specialization, contact_number AS 'Contact Number' from doctor WHERE doctor_id='" & SearchBox.Text & "' OR firstname='" & SearchBox.Text & "' OR lastname='" & SearchBox.Text & "'", DoctorDataGridView)
     End Sub
 End Class
