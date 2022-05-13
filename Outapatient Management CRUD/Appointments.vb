@@ -12,7 +12,7 @@ Public Class Appointments
     End Sub
 
     Public Sub FetchAppointments()
-        reload("SELECT apt_id AS ID, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date AS Date, time AS Time, apt_type AS Type FROM appointment, patient, doctor", AppointmentTbl)
+        reload("SELECT apt_id AS ID, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date AS Date, time AS Time, apt_type AS Type FROM appointment, patient, doctor WHERE patient.patient_id=appointment.patient AND doctor.doctor_id=appointment.doctor", AppointmentTbl)
     End Sub
 
     Public Sub FetchCmbData()
