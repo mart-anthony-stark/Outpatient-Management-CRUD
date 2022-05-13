@@ -42,20 +42,25 @@
     End Sub
 
     Private Sub LabtestTbl_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles LabtestTbl.CellContentClick
-        Dim senderGrid = DirectCast(sender, DataGridView)
-        Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
-        Dim row As System.Windows.Forms.DataGridViewRow = LabtestTbl.Rows(e.RowIndex)
-        Dim id As String = row.Cells(1).Value.ToString
-        'MsgBox(column.HeaderText & id)
-        If TypeOf column Is DataGridViewButtonColumn AndAlso
-            e.RowIndex >= 0 Then
-            'TODO - Button Clicked - Execute Code Here
-            If (column.HeaderText Is "Edit") Then
-                SearchData(id)
-            ElseIf (column.HeaderText Is "Delete") Then
-                'DeleteDoctor(id)
+        Try
+            Dim senderGrid = DirectCast(sender, DataGridView)
+            Dim column As System.Windows.Forms.DataGridViewColumn = senderGrid.Columns(e.ColumnIndex)
+            Dim row As System.Windows.Forms.DataGridViewRow = LabtestTbl.Rows(e.RowIndex)
+            Dim id As String = row.Cells(1).Value.ToString
+            'MsgBox(column.HeaderText & id)
+            If TypeOf column Is DataGridViewButtonColumn AndAlso
+                e.RowIndex >= 0 Then
+                'TODO - Button Clicked - Execute Code Here
+                If (column.HeaderText Is "Edit") Then
+                    SearchData(id)
+                ElseIf (column.HeaderText Is "Delete") Then
+                    'DeleteDoctor(id)
+                End If
             End If
-        End If
+        Catch ex As Exception
+
+        End Try
+        
     End Sub
 
     'Clear labtest inputs
