@@ -218,4 +218,33 @@
             End Try
         End If
     End Sub
+
+    'Search labtest
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Try
+            reload("SELECT test_id AS ID, test_name As `Test Name`, test_type As `Test Type`, description As Description, cost As Cost from laboratorytest WHERE test_id='" & SearchBox.Text & "' OR test_name='" & SearchBox.Text & "'", LabtestTbl)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    'Refresh
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+        SearchBox.Text = ""
+        FetchLabTests()
+    End Sub
+
+    'Search disease
+    Private Sub PictureBox4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox4.Click
+        Try
+            reload("SELECT * FROM disease WHERE disease_id='" & SearchDisBox.Text & "' OR name='" & SearchDisBox.Text & "'", DiseaseTbl)
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub PictureBox3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox3.Click
+        SearchDisBox.Text = ""
+        FetchDiseases()
+    End Sub
 End Class
