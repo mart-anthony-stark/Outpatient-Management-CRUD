@@ -43,6 +43,7 @@ Partial Class Main
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.DateTxt = New System.Windows.Forms.Label()
         Me.DigitalClock = New System.Windows.Forms.Label()
+        Me.SettingsBtn = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -139,6 +140,7 @@ Partial Class Main
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.SettingsBtn)
         Me.Panel2.Controls.Add(Me.LaboratoryBtn)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.AppointmentsBtn)
@@ -286,6 +288,22 @@ Partial Class Main
         Me.DigitalClock.TabIndex = 0
         Me.DigitalClock.Text = "Label3"
         '
+        'SettingsBtn
+        '
+        Me.SettingsBtn.BackColor = System.Drawing.Color.White
+        Me.SettingsBtn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.SettingsBtn.FlatAppearance.BorderSize = 0
+        Me.SettingsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.SettingsBtn.Font = New System.Drawing.Font("Segoe UI Semibold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.SettingsBtn.ForeColor = System.Drawing.Color.FromArgb(CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer), CType(CType(112, Byte), Integer))
+        Me.SettingsBtn.Location = New System.Drawing.Point(2, 370)
+        Me.SettingsBtn.Name = "SettingsBtn"
+        Me.SettingsBtn.Size = New System.Drawing.Size(227, 50)
+        Me.SettingsBtn.TabIndex = 6
+        Me.SettingsBtn.Text = "Settings"
+        Me.SettingsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.SettingsBtn.UseVisualStyleBackColor = False
+        '
         'Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -330,4 +348,5 @@ Partial Class Main
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents LaboratoryBtn As System.Windows.Forms.Button
+    Friend WithEvents SettingsBtn As System.Windows.Forms.Button
 End Class
