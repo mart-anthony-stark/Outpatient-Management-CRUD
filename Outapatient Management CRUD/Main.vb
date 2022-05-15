@@ -39,6 +39,7 @@
         AppointmentsBtn.BackColor = Color.FromArgb(255, 255, 255)
         DoctorsBtn.BackColor = Color.FromArgb(255, 255, 255)
         LaboratoryBtn.BackColor = Color.FromArgb(255, 255, 255)
+        SettingsBtn.BackColor = Color.FromArgb(255, 255, 255)
 
         If (activePanel.Equals("Dashboard")) Then
             DashboardBtn.BackColor = Color.FromArgb(239, 243, 246)
@@ -50,6 +51,8 @@
             AppointmentsBtn.BackColor = Color.FromArgb(239, 243, 246)
         ElseIf (activePanel.Equals("Laboratory")) Then
             LaboratoryBtn.BackColor = Color.FromArgb(239, 243, 246)
+        ElseIf (activePanel.Equals("AdminSettings")) Then
+            SettingsBtn.BackColor = Color.FromArgb(239, 243, 246)
         End If
     End Sub
 
@@ -89,5 +92,9 @@
     'Laboratory'
     Private Sub Button2_Click_1(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LaboratoryBtn.Click
         LoadForm(Laboratory)
+    End Sub
+
+    Private Sub SettingsBtn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SettingsBtn.Click
+        LoadForm(AdminSettings)
     End Sub
 End Class
