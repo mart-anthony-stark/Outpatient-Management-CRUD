@@ -35,6 +35,8 @@ Partial Class Login
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -184,6 +186,29 @@ Partial Class Login
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Please enter your details"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Label6.Location = New System.Drawing.Point(564, 464)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(162, 16)
+        Me.Label6.TabIndex = 7
+        Me.Label6.Text = "Doesn't have an account?"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(88, Byte), Integer), CType(CType(180, Byte), Integer))
+        Me.Label9.Location = New System.Drawing.Point(724, 464)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(65, 16)
+        Me.Label9.TabIndex = 8
+        Me.Label9.Text = "SIGNUP"
+        '
         'Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -191,6 +216,8 @@ Partial Class Login
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(243, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer))
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.ClientSize = New System.Drawing.Size(901, 546)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PasswordBox)
         Me.Controls.Add(Me.Label4)
@@ -223,4 +250,6 @@ Partial Class Login
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class
