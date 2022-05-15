@@ -26,7 +26,12 @@
                     .CommandText = "SELECT * FROM admin WHERE email='" & email & "'"
                     cmdread = .ExecuteReader
                     If (cmdread.Read()) Then
-                        Dim pass As String = (cmdread.GetString(4))
+                        Dim id = cmdread.GetString(0)
+                        Dim fname = cmdread.GetString(1)
+                        Dim lname = cmdread.GetString(2)
+                        Dim _email = cmdread.GetString(3)
+                        Dim _pass = cmdread.GetString(4)
+                        Dim pass As String = Crypto.Decrypt(_pass, "supersecretstring")
                         'Check equality of passwords
                         If (Not pass.Equals(password)) Then
                             MessageBox.Show("Incorrect password", "Incorrect Credentials", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -35,6 +40,11 @@
                             MsgBox("Logged in Successfully")
                             EmailBox.Text = ""
                             PasswordBox.Text = ""
+                            AdminSettings.userID.Text = id
+                            AdminSettings.firstname.Text = fname
+                            AdminSettings.lastname.Text = lname
+                            AdminSettings.email.Text = _email
+                            UserPassword = _pass
                             Me.Hide()
                             Main.Show()
                         End If
