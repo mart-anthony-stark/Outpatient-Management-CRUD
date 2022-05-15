@@ -83,6 +83,13 @@
     <Compile Include="Appointments.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ChangePassword.Designer.vb">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Crypto.vb" />
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
@@ -120,6 +127,13 @@
     <Compile Include="EditTestResult.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EditUsername.Designer.vb">
+      <DependentUpon>EditUsername.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EditUsername.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalVars.vb" />
     <Compile Include="GridModule.vb" />
     <Compile Include="Laboratory.Designer.vb">
       <DependentUpon>Laboratory.vb</DependentUpon>
@@ -168,6 +182,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="AdminSettings.Designer.vb">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Signup.Designer.vb">
       <DependentUpon>Signup.vb</DependentUpon>
     </Compile>
@@ -176,8 +196,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminSettings.resx">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointments.resx">
       <DependentUpon>Appointments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePassword.resx">
+      <DependentUpon>ChangePassword.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
@@ -196,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditTestResult.resx">
       <DependentUpon>EditTestResult.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditUsername.resx">
+      <DependentUpon>EditUsername.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Laboratory.resx">
       <DependentUpon>Laboratory.vb</DependentUpon>
@@ -268,6 +297,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Welcome!.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userID.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carbon_email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lname.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fname.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
