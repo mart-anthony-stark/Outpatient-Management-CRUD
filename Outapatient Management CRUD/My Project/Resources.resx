@@ -118,40 +118,52 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="undraw_doctors_hwty 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\undraw_doctors_hwty 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="196123" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\196123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lname" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lname.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="undraw_doctor_kw-5-l 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undraw_doctor_kw-5-l 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon-park-outline_appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon-park-outline_appointment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hello! (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hello! (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="carbon_email" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carbon_email.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tabler_microscope" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tabler_microscope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fluent_patient-32-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fluent_patient-32-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="fontisto_doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fontisto_doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="196123" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\196123.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="undraw_doctor_kw5l" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\undraw_doctor_kw5l.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tabler_microscope" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler_microscope.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="undraw_doctors_hwty 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\undraw_doctors_hwty 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fluent_patient-32-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fluent_patient-32-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="userID" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\userID.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Welcome!" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Welcome!.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fontisto_doctor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fontisto_doctor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon-park-outline_appointment" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon-park-outline_appointment.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fname" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fname.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
