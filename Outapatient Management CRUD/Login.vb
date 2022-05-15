@@ -48,4 +48,9 @@
             strconn.Close()
         End If
     End Sub
+
+    Private Sub Label9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label9.Click
+        Signup.Show()
+        Me.Hide()
+    End Sub
 End Class
