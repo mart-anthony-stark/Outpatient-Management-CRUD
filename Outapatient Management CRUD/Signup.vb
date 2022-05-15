@@ -17,6 +17,7 @@
         WindowState = FormWindowState.Minimized
     End Sub
 
+    'Signup
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         Dim fname, lname, email, password As String
         fname = FnameBox.Text
@@ -33,5 +34,30 @@
             MessageBox.Show("Your password must be at least 8 characters long", "Weak Password", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Return
         End If
+
+        'Check if email exists
+        Try
+            strconn.Open()
+            With cmd
+                .Connection = strconn
+                .CommandText = "SELECT * FROM admin WHERE email='" & email & "'"
+                cmdread = .ExecuteReader
+                If (cmdread.Read()) Then
+                    MessageBox.Show("The email you entered is already registered. Please enter different email", "Email Already Taken", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Else
+                    'Hash password
+                    strconn.Close()
+                    Dim hashedPass As String = Crypto.Encrypt(password, "supersecretstring")
+                    readuery("INSERT INTO admin VALUES(null, '" & fname & "', '" & lname & "', '" & email & "', '" & hashedPass & "')")
+                    MessageBox.Show("Account created successfully", "Signup Successfull", MessageBoxButtons.OK, MessageBoxIcon.None)
+
+                    Me.Hide()
+                    Login.Show()
+                End If
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Something went wrong", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+        strconn.Close()
     End Sub
 End Class
