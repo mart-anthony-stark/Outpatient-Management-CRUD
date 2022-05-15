@@ -73,9 +73,29 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property carbon_email() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("carbon_email", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property fluent_patient_32_filled() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("fluent_patient-32-filled", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property fname() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("fname", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -106,6 +126,16 @@ Namespace My.Resources
         Friend ReadOnly Property icon_park_outline_appointment() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("icon-park-outline_appointment", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property lname() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("lname", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
@@ -166,6 +196,16 @@ Namespace My.Resources
         Friend ReadOnly Property undraw_doctors_hwty_1() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("undraw_doctors_hwty 1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property userID() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("userID", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
