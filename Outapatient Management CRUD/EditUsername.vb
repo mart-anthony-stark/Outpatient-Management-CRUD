@@ -9,7 +9,7 @@
         Else
             Try
                 readuery("UPDATE admin SET firstname='" & fname & "', lastname='" & lname & "' WHERE admin_id=" & AdminSettings.userID.Text)
-                MsgBox("Username and email was updated successfully")
+                MsgBox("Username was updated successfully")
                 AdminSettings.firstname.Text = fname
                 AdminSettings.lastname.Text = lname
             Catch ex As Exception

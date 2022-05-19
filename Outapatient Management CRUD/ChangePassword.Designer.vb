@@ -101,6 +101,7 @@ Partial Class ChangePassword
         Me.NewPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.NewPassword.Location = New System.Drawing.Point(207, 190)
         Me.NewPassword.Name = "NewPassword"
+        Me.NewPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.NewPassword.Size = New System.Drawing.Size(236, 29)
         Me.NewPassword.TabIndex = 71
         '
@@ -139,6 +140,7 @@ Partial Class ChangePassword
         Me.ConfirmPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ConfirmPassword.Location = New System.Drawing.Point(207, 260)
         Me.ConfirmPassword.Name = "ConfirmPassword"
+        Me.ConfirmPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.ConfirmPassword.Size = New System.Drawing.Size(236, 29)
         Me.ConfirmPassword.TabIndex = 74
         '

@@ -173,4 +173,17 @@ Public Class Appointments
         End Try
         
     End Sub
+
+    Private Sub PictureBox2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox2.Click
+        SearchBox.Text = ""
+        FetchAppointments()
+    End Sub
+
+    Private Sub PictureBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PictureBox1.Click
+        Try
+            reload("SELECT apt_id AS ID, concat(patient.lastname,', ', patient.firstname) AS Patient, concat(doctor.lastname,', ', doctor.firstname) AS Doctor, date AS Date, time AS Time, apt_type AS Type FROM appointment, patient, doctor WHERE patient.patient_id=appointment.patient AND doctor.doctor_id=appointment.doctor AND apt_id='" & SearchBox.Text & "'", AppointmentTbl)
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
